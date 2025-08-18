@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+:root {
+    --primary-color: #00aaff;
+    --secondary-color: #000;
+    --text-color: whitesmoke;
+    --accent-color: #76d450;
+    --accent-color-2: #8017e2;
+    --heading: 'Iceland', sans-serif;
+    --body: "Electrolize", sans-serif;
+}
+
+header {
+    display: none;
+}
+
+.active {
+    color: var(--primary-color);
+}
+
+body {
+    position: relative;
+    background-color: var(--secondary-color);
+    z-index: 0;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/city-white.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+h1 {
+    display: block;
+    font-family: var(--heading);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h2,
+h3 {
+    font-family: var(--heading);
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+p {
+    font-family: var(--body);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+/* Burger button */
+.mobile-header {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    gap: 3rem;
+}
+
+.mobile-header .burger {
+    font-size: 25px;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    margin: 0%;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Nav starts hidden */
+.mobile-nav {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    max-height: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Show nav when active */
+.mobile-nav.active {
+    max-height: 300px;
+}
+
+/* Nav list styling */
+.mobile-nav ul {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.mobile-nav a.active,
+.mobile-nav a:hover {
+    display: block;
+    color: #0090da;
+    font-weight: bold;
+}
+
+.burger.close {
+    transform: scale(1.5);
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+}
+
+.menu-link {
+    font-family: var(--body);
+    color: var(--text-color);
+    font-size: .85rem;
+    text-decoration: none;
+}
+
+/*Booking Icon*/
+.booking {
+    width: 150%;
+    height: auto;
+    background: url('/images/birthday.png') no-repeat center center;
+    background-size: contain;
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+}
+
+.book-link {
+    font-family: var(--body);
+    color: var(--text-color);
+    font-size: .85rem;
+    text-decoration: none;
+}
+
+.mobile-header .logo {
+    max-width: 30%;
+    height: auto;
+}
+
+/*Footer*/
+
+.site-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    border-top: 2px solid #444;
+    width: 100%;
+
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-links,
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    line-height: 1.6;
+}
+
+.footer-links span,
+.footer-legal span {
+    flex-basis: 100%;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.site-footer a {
+    color: #00aced;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #1da1f2;
+    text-decoration: underline;
+}
+
+/*Form*/
+.form-wrapper {
+    margin-top: 1rem;
+    flex: 1;
+    overflow: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 75vh;
+    display: block;
+    border: none;
+}
+
+figure {
+    margin-bottom: 3rem;
+
+}
+
+.waiver-wrapper {
+    background-color: rgb(194, 194, 194);
+    display: flex;
+    justify-self: center;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.waiver {
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    border: none;
+}
+
+/*Policy*/
+.accordion-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0 3rem 0;
+}
+
+.accordion {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 1rem;
+    font-family: var(--heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline-offset: 2px;
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: 2px solid var(--primary-color);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1rem;
+    color: var(--text-color);
+    font-family: var(--body);
+    font-size: 1rem;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.accordion-content.open {
+    padding: 1rem;
+}
+
+.accordion-content.open a {
+    color: var(--accent-color);
+}
+
+.contact-container {
+    margin: 2rem auto;
+}
+
+.contact-location h3 {
+    margin-bottom: 1rem;
+}
+
+/*Contact/Park Info*/
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 25%;
+    /* sets aspect ratio */
+    position: relative;
+    margin: 3rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: brightness(75%);
+}
+
+/* Contact Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 3rem auto;
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+    /* Darker for better contrast */
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Inputs and Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    font-family: var(--body);
+    font-size: 0.75rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: rgba(71, 71, 71, 0.527);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.contact-form textarea {
+    min-height: 8rem;
+}
+
+.contact-form label {
+    color: var(--text-color);
+    font-family: var(--body);
+    font-size: 1.5rem;
+}
+
+/* Placeholder styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus glow effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 12px var(--accent-color);
+}
+
+/* Pricing Page */
+.rates-specials {
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title h2 {
+    font-family: var(--heading);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.price-card {
+    position: relative;
+    background-color: #000;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.price-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/pheonix.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.price-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--accent-color);
+}
+
+.price-card h3 {
+    font-family: var(--heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.price-card .price {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
+}
+
+.price-card span {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Price Page Divider */
+.section-divider {
+    border: none;
+    height: .4rem;
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--accent-color-2), var(--primary-color), var(--accent-color));
+    margin: 2.5rem 0;
+}
+
+/* Price Page Specials Grid */
+.specials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.special-card {
+    position: relative;
+    background-color: #000;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.special-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.special-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--accent-color);
+}
+
+.special-card h3 {
+    font-family: var(--heading);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.special-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
