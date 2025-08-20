@@ -15,6 +15,27 @@ header {
     display: none;
 }
 
+.hero {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/pheonix.png') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
 .active {
     color: var(--primary-color);
 }
@@ -37,7 +58,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.15;
+    opacity: 0.2;
     z-index: -1;
 }
 
@@ -45,11 +66,17 @@ body.loaded {
     opacity: 1;
 }
 
+.welcome {
+    margin-top: 12rem;
+    margin-bottom: 3rem;
+}
+
 h1 {
     display: block;
     font-family: var(--heading);
     color: var(--primary-color);
     text-align: center;
+    z-index: 1;
 }
 
 h2,
@@ -153,6 +180,192 @@ p {
     font-size: .85rem;
     text-decoration: none;
 }
+
+/*Home Page*/
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-card.fun {
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    border: 2px solid var(--primary-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.location-card.fun:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 30px var(--accent-color);
+}
+
+.location-card.fun img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(90%) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.location-card.fun:hover img {
+    filter: brightness(105%);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-family: var(--heading);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-family: var(--body);
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    margin-bottom: 1rem;
+}
+
+/* Homepage Features */
+.rotating-features {
+    padding: 3rem 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+}
+
+.rotating-features .section-title {
+    font-family: var(--heading);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* Marquee container with perspective */
+.features-marquee {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    perspective: 1000px;
+}
+
+/* Track that moves */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Neon glowing card with 3D setup */
+.feature-card {
+    flex: 0 0 auto;
+    margin: 0 1rem;
+    background: url('../images/pheonix.png') no-repeat center center;
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    width: 280px;
+    height: 320px;
+    color: var(--text-color);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+    overflow: visible;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffff, #ff00cc);
+    background-size: 300% 300%;
+    animation: borderFlow 6s linear infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+/* Card text with 3D lift */
+.feature-card .card-text {
+    font-family: var(--body);
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    color: #fff;
+    transform: translateZ(0);
+    transition: transform 0.4s ease;
+    z-index: 2;
+}
+
+.feature-card:hover .card-text {
+    transform: translateZ(20px) rotateX(3deg);
+}
+
+/* Optional animated border */
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Glowing neon-style button */
+.select-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-family: var(--heading);
+    color: #fff;
+    background: var(--accent-color-2);
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 10px var(--accent-color-2), 0 0 20px var(--accent-color-2);
+    transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color);
+    transform: scale(1.05);
+}
+
 
 /*Booking Icon*/
 .booking {
