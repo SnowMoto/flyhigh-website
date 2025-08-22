@@ -24,23 +24,28 @@
         <link
             href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap"
             rel="stylesheet">
+        <link rel="stylesheet" href="../styles/stars.css">
         <link rel="stylesheet" href="../farmington/fm-styles.css">
         <link rel="stylesheet" href="../styles/sm-styles.css">
         <link rel="stylesheet" href="../styles/med-styles.css">
         <link rel="stylesheet" href="../styles/lg-styles.css">
     </head>
     <body>
+        <div class="bg-image"></div>
+        <div class="stars-wrapper">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </div>
         <header>
-            <img class="logo" rel="preload" as="image" src="../images/logo.png"
-                alt="Fly High Logo">
+            <img class="logo" rel="preload" as="image" src="../images/logo2.webp" alt="Fly High Logo">
             <nav>
                 <ul>
                     <li><a href="../farmington/features.html">Features</a></li>
-                    <li><a href="../farmington/rates.html">Prices</a></li>
-                    <li><a href="../farmington/party.html" class="active">Book a
-                            Party</a></li>
+                    <li><a href="../farmington/rates.html">Pricing / Specials</a></li>
+                    <li><a href="../farmington/party.html" class="active">Party / Events</a></li>
                     <li><a href="../farmington/waiver.html">Waiver</a></li>
-                    <li><a href="../farmington/info.html">Park Info</a></li>
+                    <li><a href="../farmington/info.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -50,7 +55,7 @@
                     alt="Party Booking">
                 <span class="book-link">Book</span>
             </div>
-            <img class="logo" rel="preload" as="image" src="../images/logo.png"
+            <img class="logo" rel="preload" as="image" src="../images/logo.webp"
                 alt="Fly High Logo">
             <div class="menu-container">
                 <button class="burger" aria-label="Toggle menu"
@@ -61,17 +66,19 @@
                 <ul>
                     <li><a href="../farmington/features.html">Features</a></li>
                     <li><a href="../farmington/rates.html">Prices</a></li>
-                    <li><a href="../farmington/party.html" class="active">Book a
-                            Party</a></li>
+                    <li><a href="../farmington/party.html" class="active">Book a Party</a></li>
                     <li><a href="../farmington/waiver.html">Waiver</a></li>
                     <li><a href="../farmington/info.html">Park Info</a></li>
                 </ul>
             </nav>
         </header>
         <main>
+            <div class="hero">
+                <div id="title">
+                    <h1>Fly High Birthday Parties</h1>
+                </div>
+            </div>
             <div class="party-slider-container">
-                <h1 >Fly High Birthday Parties</h1>
-
                 <div class="party-tabs">
                     <button class="tab-btn active" data-tab="open">Open Party
                         Area</button>
@@ -85,30 +92,26 @@
                         <div class="tab-content active" id="open">
                             <div class="party-layout">
                                 <div class="party-image">
+                                    <h2 class="package-title">Open Party Area</h2>
                                     <img rel="preload" as="image"
                                         src="../images/open.webp"
                                         alt="Open Table Party">
+                                    <h3 style="padding: 1rem 0 0 0; margin: 0;">More Options Below</h3>
                                 </div>
                                 <div class="party-text">
-                                    <h2 class="package-title">Open Party
-                                        Area</h2>
-                                    <p class="package-price">$26 per Flyer</p>
+                                    <p class="package-price" style="margin-top: 2rem;">$200 - 2.5 HRS Party Time</p>
                                     <ul>
-                                        <li>2 Hour Play / Table Time</li>
-                                        <li>Party Host will Assist, Setup &
-                                            Cleanup</li>
-                                        <li>Party Supplies to match your theme
-                                            (no
-                                            balloons/decor included)</li>
-                                        <li>Bottled Water for each Flyer</li>
-                                        <li>Fridge / Freezer available for your
-                                            use</li>
-                                        <li>1 Free Flyer Pass to the Birthday
-                                            Child for
-                                            next visit</li>
+                                        <li>6 Guests Included</li>
+                                        <li>1 HR Table Time / 1.5 HRS Play Time</li>
+                                        <li>Party Host</li>
+                                        <li>Customize Table Setting Colors</li>
+                                        <li>Bottled Water for each Guest</li>
+                                        <li>Bounce Back Pass for Birthday Child</li>
                                     </ul>
+                                    <hr class="section-divider" style="margin: 0;">
+                                    <p class="package-price" style="margin-top: 1rem;color: #ca91ff;">$26 for additional Jumpers</p>
                                     <div class="wrapper">
-                                        <a class="party-btn" href="#">
+                                        <a class="party-btn" href="../farmington/open.html">
                                             <span class='book'>Book Now</span>
                                             <span>
                                                 <svg width="2rem"
@@ -144,25 +147,25 @@
                 <div class="tab-content" id="private">
                     <div class="party-layout">
                         <div class="party-image">
-                            <img src="../images/private.jpg"
+                            <h2 class="package-title" style="margin-top: -4rem;">Private Party Room</h2>
+                            <img src="../images/private.webp"
                                 alt="Private Room Party">
                         </div>
                         <div class="party-text">
-                            <h2>Private Party Room</h2>
-                            <p class="package-price">$32 per Flyer</p>
+                            <p class="package-price" style="margin-top: 2rem;">$260 - 2.5 HRS Party Time</p>
                             <ul>
-                                <li>2 Hour Play / Room Time</li>
-                                <li>Party Host will Assist, Setup & Cleanup</li>
-                                <li>Party Supplies & Colors to match your theme
-                                    (balloons and decor not included)</li>
-                                <li>Bottled Water for each Flyer</li>
-                                <li>Fridge / Freezer available for your use</li>
-                                <li>1 Free Flyer Pass for next visit and T-Shirt
-                                    to the Birthday
-                                    Child</li>
+                                <li>6 Guests Included</li>
+                                <li>2.5 HRS Private Room</li>
+                                <li>Party Host</li>
+                                <li>Customize Table Setting Colors</li>
+                                <li>Bottled Water for each Guest</li>
+                                <li>Bounce Back Pass for Birthday Child</li>
+                                <li>Free T-shirt for Birthday Child</li>
                             </ul>
+                            <hr class="section-divider" style="margin: 0;">
+                            <p class="package-price" style="margin-top: 1rem;color: #ca91ff;">$32 for additional Jumpers</p>
                             <div class="wrapper">
-                                <a class="party-btn" href="#">
+                                <a class="party-btn" href="../farmington/private.html">
                                     <span class='book'>Book Now</span>
                                     <span>
                                         <svg width="2rem" height="1.5rem"
@@ -192,7 +195,7 @@
                 <div class="tab-content" id="large">
                     <div class="party-layout">
                         <div class="party-image">
-                            <img src="../images/large-party.jpg"
+                            <img src="../images/large-party.webp"
                                 alt="Large Group Party">
                         </div>
                         <div class="party-text">
@@ -204,7 +207,7 @@
                                     needs</li>
                             </ul>
                             <div class="wrapper">
-                                <a class="party-btn" href="#">
+                                <a class="party-btn" href="../farmington/info.html">
                                     <span class='book'>Contact Us</span>
                                     <span>
                                         <svg width="2rem" height="1.5rem"
@@ -234,7 +237,7 @@
             </div>
 
             <section class="package-includes">
-                <h2>Dont Worry, We can Level Up Your Party!</h2>
+                <h2>Level Up Your Party</h2>
                 <div class="includes-grid">
                     <div class="include-item">
                         <img src="../images/treat.png"

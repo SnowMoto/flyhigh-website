@@ -2,9 +2,9 @@
 .party-slider-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 1rem;
     text-align: center;
     color: white;
+    z-index: 1;
 }
 
 /* Tab Buttons*/
@@ -102,13 +102,12 @@
     flex-direction: column;
     align-items: center;
     background-color: #1a1a1a;
-    /* Dark background */
     border-radius: 12px;
-    padding: 1rem 2.5rem 1rem 2.5rem;
     gap: 1rem;
     text-align: center;
     margin-top: 3rem;
-}
+    padding: 0 2rem ;
+} 
 
 /* Image Styling*/
 .party-image img {
@@ -127,8 +126,8 @@
 }
 
 .party-text .package-price {
-    font-size: 1.5rem;
-    color: #76d450;
+    font-size: 1.25rem;
+    color: #00aaff;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -151,12 +150,12 @@
     display: flex;
     justify-content: center;
     background: transparent;
-    padding: 1rem;
+    padding: 1rem 0 2.5rem 0;
 }
 
 .party-btn {
     display: flex;
-    padding: 0.5rem 1rem;
+    padding: 1rem 0 1rem 1rem;
     text-decoration: none;
     font-family: 'oswald', sans-serif;
     font-size: 1.5rem;
@@ -252,7 +251,7 @@ path.two {
 /* Level Up Grid */
 .package-includes {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 0 1rem 2rem 1rem;
 }
 
 .includes-grid {
@@ -284,6 +283,9 @@ path.two {
         grid-template-columns: repeat(3, 1fr);
         gap: .75rem;
         margin-top: 4rem;
+    }
+    .package-title {
+        margin-top: 2rem;
     }
     .party-text {
         padding-left: 2rem;
@@ -337,6 +339,9 @@ path.two {
         text-align: left;
         justify-content: center;
     }
+    .package-title {
+        margin-top: -1rem;
+    }
 
     .party-tabs {
         gap: 5rem;
@@ -383,5 +388,70 @@ path.two {
 
     .include-item p {
         font-size: 1.25rem;
+    }
+}
+
+/* ===== Mobile Centering Fix for Party Page ===== */
+@media (max-width: 500px) {
+
+    /* Party Layout: stack vertically and center */
+    .party-layout {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+        width: 100% !important;
+    }
+
+    .package-title {
+        margin-top: 2rem;
+    }
+
+    /* Party Images and Text */
+    .party-image,
+    .party-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Include items: center icon + text */
+    .include-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 0.5rem !important;
+    }
+
+    .include-item img {
+        margin: 0 auto !important;
+        max-width: 50% !important;
+    }
+
+    .include-item p {
+        text-align: center !important;
+    }
+
+    /* Buttons: reduce skew and center */
+    .party-btn,
+    .book {
+        transform: none !important;
+        margin: 0.5rem auto !important;
+        display: block !important;
+    }
+
+    /* Slider / Tabs */
+    .party-slider-container,
+    .party-tabs {
+        width: 95% !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+    }
+
+    .tab-btn {
+        margin: 0.5rem auto !important;
+        display: block !important;
+        font-size: 1.2rem !important;
     }
 }

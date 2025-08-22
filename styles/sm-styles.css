@@ -11,59 +11,38 @@
     --body: "Electrolize", sans-serif;
 }
 
+header, main, footer {
+  position: relative; 
+  z-index: 2;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; 
+    height: 100%;
+    background-image: url('../images/city.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
 header {
     display: none;
 }
 
 .hero {
-    height: 30vh;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../images/pheonix.png') no-repeat center center/cover;
-    opacity: 0.2;
-    z-index: -1;
-}
-
 .active {
     color: var(--primary-color);
-}
-
-body {
-    position: relative;
-    background-color: var(--secondary-color);
-    z-index: 0;
-
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../images/city-white.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0.2;
-    z-index: -1;
-}
-
-body.loaded {
-    opacity: 1;
 }
 
 .welcome {
@@ -186,6 +165,8 @@ p {
 .location-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
     gap: 2rem;
     padding: 3rem 1rem;
     max-width: 1200px;
@@ -243,7 +224,6 @@ p {
 /* Homepage Features */
 .rotating-features {
     padding: 3rem 1rem;
-    background: rgba(0, 0, 0, 0.85);
     overflow: hidden;
 }
 
@@ -404,7 +384,6 @@ p {
     font-size: 1.5rem;
     border-top: 2px solid #444;
     width: 100%;
-
 }
 
 .footer-content {
@@ -464,7 +443,7 @@ figure {
 }
 
 .waiver-wrapper {
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(218, 218, 218);
     display: flex;
     justify-self: center;
     padding: 1rem;
@@ -477,6 +456,10 @@ figure {
     max-width: 600px;
     max-height: 500px;
     border: none;
+}
+
+.party-book {
+    max-width: 800px
 }
 
 /*Policy*/
@@ -615,7 +598,7 @@ figure {
 
 /* Pricing Page */
 .rates-specials {
-    padding: 2rem 1rem;
+    padding: 1rem 0 2rem 0;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -631,18 +614,19 @@ figure {
 /* Pricing Grid */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: stretch;
     gap: 1.5rem;
 }
 
 .price-card {
     position: relative;
     background-color: #000;
-    border: 2px solid var(--primary-color);
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+    box-shadow: 0 0 15px var(--primary-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
@@ -655,7 +639,7 @@ figure {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.25;
     z-index: 0;
 }
 
@@ -696,7 +680,7 @@ figure {
 /* Price Page Divider */
 .section-divider {
     border: none;
-    height: .4rem;
+    height: .2rem;
     background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--accent-color-2), var(--primary-color), var(--accent-color));
     margin: 2.5rem 0;
 }
@@ -704,18 +688,19 @@ figure {
 /* Price Page Specials Grid */
 .specials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    justify-content: center;
+    align-items: stretch;
     gap: 1.5rem;
 }
 
 .special-card {
     position: relative;
     background-color: #000;
-    border: 2px solid var(--primary-color);
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 0 50px 50px 50px;
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+    box-shadow: 0 0 15px var(--primary-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
@@ -732,8 +717,9 @@ figure {
 
 .special-card h3 {
     font-family: var(--heading);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
     color: var(--primary-color);
 }
 
@@ -743,3 +729,4 @@ figure {
     margin-bottom: 1rem;
     line-height: 1.4;
 }
+
