@@ -16,3 +16,24 @@ burger.addEventListener('click', () => {
     burger.classList.remove('close');
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll(".accordion-header");
+
+  accordions.forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+
+      // Toggle open/close
+      content.classList.toggle("open");
+
+      if (content.classList.contains("open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        header.setAttribute("aria-expanded", "true");
+      } else {
+        content.style.maxHeight = null;
+        header.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+});
