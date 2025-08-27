@@ -1,36 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 :root {
     --primary-color: #00aaff;
     --secondary-color: #000;
-    --text-color: whitesmoke;
+    --text-color: white;
     --accent-color: #76d450;
     --accent-color-2: #8017e2;
     --heading: 'Iceland', sans-serif;
     --body: "Electrolize", sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
-header, main, footer {
-    position: relative; 
+header,
+main,
+footer {
+    position: relative;
     z-index: 2;
 }
 
 .bg-image {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; 
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background-image: url('../images/city.webp');
+    background-image: url('../images/kids-jump.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     z-index: 0;
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 header {
@@ -167,43 +183,88 @@ p {
 
 /*Home Page*/
 
-.location-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
-    justify-items: center;
-    gap: 2rem;
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.location-select {
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
 }
 
-.location-card.fun {
-    background: linear-gradient(145deg, #111, #1a1a1a);
-    border: 2px solid var(--primary-color);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
-    transform-style: preserve-3d;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+.location-select select {
+    position: relative;
+    font-family: var(--body);
+    font-size: 1.2rem;
+    padding: 0.75rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: var(--text-color);
     cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    appearance: none;
+    /* hides default arrow */
+    transition: all 0.3s ease-in-out;
 }
 
-.location-card.fun:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 30px var(--accent-color);
+/* Neon border using ::before */
+.location-select::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 10px;
+    background: linear-gradient(45deg,
+            #ff0000, #ff7300, #fffb00,
+            #48ff00, #00ffd5, #002bff,
+            #7a00ff, #ff00c8, #ff0000);
+    background-size: 500%;
+    filter: blur(5px);
+    z-index: 0;
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
 }
 
-.location-card.fun img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    filter: brightness(90%) contrast(1.1);
-    transition: filter 0.3s ease;
+/* Hover state → intensify rainbow */
+.location-select:hover::before {
+    filter: blur(8px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    animation-duration: 10s;
+    /* speed up animation on hover */
 }
 
-.location-card.fun:hover img {
-    filter: brightness(105%);
+/* Selected (focus) → blue glow */
+.location-select select:focus+.glow,
+.location-select select:active+.glow {
+    background: #0090da;
+    filter: blur(12px);
+    box-shadow: 0 0 20px #0090da, 0 0 40px #0090da;
+    animation: none;
+}
+
+/* Glowing rainbow animation */
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Custom dropdown arrow */
+.location-select select {
+    background: #111 url("data:image/svg+xml;utf8,<svg fill='white' height='20' width='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M5.516 7.548l4.484 4.482 4.484-4.482L16 9.064l-6 6-6-6z'/></svg>") no-repeat right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
 }
 
 .card-content {
@@ -260,6 +321,7 @@ p {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
@@ -306,7 +368,7 @@ p {
     bottom: 1.5rem;
     left: 1.5rem;
     right: 1.5rem;
-    color: #fff;
+    color: var(--text-color);
     transform: translateZ(0);
     transition: transform 0.4s ease;
     z-index: 2;
@@ -321,9 +383,11 @@ p {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -336,7 +400,7 @@ p {
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
     font-family: var(--heading);
-    color: #fff;
+    color: var(--text-color);
     background: var(--accent-color-2);
     border: none;
     border-radius: 50px;
@@ -383,7 +447,7 @@ p {
 
 .site-footer {
     background-color: #000;
-    color: #fff;
+    color: var(--text-color);
     padding: 30px 20px;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
@@ -414,7 +478,7 @@ p {
 .footer-links span,
 .footer-legal span {
     flex-basis: 100%;
-    color: #ccc;
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 
@@ -681,7 +745,7 @@ figure {
 .section-divider {
     border: none;
     height: .2rem;
-    background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--accent-color-2), var(--primary-color), var(--accent-color));
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--primary-color), var(--accent-color));
     margin: 2.5rem 0;
 }
 
@@ -729,4 +793,3 @@ figure {
     margin-bottom: 1rem;
     line-height: 1.4;
 }
-

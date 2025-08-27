@@ -1,8 +1,16 @@
 // Number of stars function
 @function multiple-box-shadow($n) {
-  $value: '#{random(2000)}px #{random(2000)}px #FFF';
-  @for $i from 2 through $n {
-    $value: '#{$value}, #{random(2000)}px #{random(2000)}px #FFF';
+  $value: "";
+  @for $i from 1 through $n {
+    // Alternate between blue and green
+    $color: if($i % 2 == 0, #76d450, #00aaff);
+
+    // Add comma except for the first item
+    @if $i == 1 {
+      $value: '#{random(2000)}px #{random(2000)}px #{$color}';
+    } @else {
+      $value: '#{$value}, #{random(2000)}px #{random(2000)}px #{$color}';
+    }
   }
   @return unquote($value);
 }
@@ -16,22 +24,6 @@ body {
   position: relative;
   background-color: var(--secondary-color);
   z-index: 0;
-}
-
-// Background image layer
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('../images/city-white.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  opacity: 0.2;
-  z-index: 1; // above stars
 }
 
 // Star layers

@@ -31,7 +31,7 @@
     </head>
     <body>
         <header>
-            <img class="logo" src="./images/logo2.webp" alt="Fly High Logo">
+            <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="../images/logo2.webp" alt="Fly High Logo"></a>
         </header>
         <header class="mobile-header">
             <div class="booking-container">
@@ -39,7 +39,7 @@
                     alt="Party Booking">
                 <span class="book-link">Book</span>
             </div>
-            <img class="logo" src="./images/logo3.webp" alt="Fly High Logo">
+            <img class="logo" src="./images/logo2.webp" alt="Fly High Logo">
             <div class="menu-container">
                 <button class="burger" aria-label="Toggle menu"
                     aria-expanded="false">&#9776;</button>
@@ -48,38 +48,24 @@
             </nav>
         </header>
         <main>
-            <h1 class="welcome">Welcome to Fly High Trampoline Park</h1>
-            <p>Your ultimate destination for fun and adventure!</p>
-            <p>Choose a location near you:</p>
+            <section class="hero">
+                <h1 class="welcome">Welcome to Fly High Trampoline Park</h1>
+                <p>Your ultimate destination for fun and adventure!</p>
+                <p>Select your nearest location to start bouncing:</p>
 
-            <div class="location-grid">
-            <div class="location-card fun">
-                <img src="./images/pheonix.png" alt="Farmington Trampoline Park">
-                <div class="card-content">
-                <h3>Farmington, NM</h3>
-                <p>Bounce into fun in the heart of New Mexico!</p>
-                <a href="/farmington" class="select-btn">Let’s Go!</a>
+                <div class="location-select">
+                    <select id="location-dropdown" onchange="goToLocation(this)">
+                    <option value="">-- Choose a Location --</option>
+                    <option value="/farmington/features.html">Farmington NM</option>
+                    <option value="/ogden/features.html">Ogden UT</option>
+                    <option value="/sparks/features.html">Reno NV</option>
+                    <option value="/boise/features.html">Boise ID</option>
+                    <option value="/kenosha/features.html">Kenosha WI</option>
+                    <option value="/collins/features.html">Collins CO</option>
+                    </select>
+                    <span class="glow"></span>
                 </div>
-            </div>
-
-            <div class="location-card fun">
-                <img src="./images/pheonix.png" alt="Phoenix Trampoline Park">
-                <div class="card-content">
-                <h3>Ogden, UT</h3>
-                <p>Let’s fly high and bounce!</p>
-                <a href="/ogden" class="select-btn">Jump In!</a>
-                </div>
-            </div>
-
-            <div class="location-card fun">
-                <img src="./images/pheonix.png" alt="Reno Trampoline Park">
-                <div class="card-content">
-                <h3>Reno, NV</h3>
-                <p>Hit the jackpot of jumping joy!</p>
-                <a href="/reno" class="select-btn">Choose Me!</a>
-                </div>
-            </div>
-            </div>
+            </section>
             <section class="rotating-features">
             <h2 class="section-title">Our Features</h2>
             <div class="features-marquee">
@@ -147,12 +133,17 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
         <script>
-        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.3
+            window.addEventListener("pageshow", function () {
+            const dropdown = document.getElementById("location-dropdown");
+            if (dropdown) {
+            dropdown.selectedIndex = 0; // reset to the first option
+            }
         });
+        function goToLocation(select) {
+            if (select.value) {
+            window.location.href = select.value;
+            }
+        }
         </script>
         <script src="./scripts/burger.js"></script>
         <script src="./scripts/slider.js"></script>

@@ -37,3 +37,10 @@ tabs.forEach(tab => {
     }, 500); // Match your CSS transition duration
   });
 });
+
+VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3
+        });
