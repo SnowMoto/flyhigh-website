@@ -33,20 +33,6 @@
         <header>
             <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="../images/logo2.webp" alt="Fly High Logo"></a>
         </header>
-        <header class="mobile-header">
-            <div class="booking-container">
-                <img class="booking" src="./images/birthday.png"
-                    alt="Party Booking">
-                <span class="book-link">Book</span>
-            </div>
-            <img class="logo" src="./images/logo2.webp" alt="Fly High Logo">
-            <div class="menu-container">
-                <button class="burger" aria-label="Toggle menu"
-                    aria-expanded="false">&#9776;</button>
-                <span class="menu-link">Menu</span>
-            </div>
-            </nav>
-        </header>
         <main>
             <section class="hero">
                 <h1 class="welcome">Welcome to Fly High Trampoline Park</h1>
@@ -56,12 +42,12 @@
                 <div class="location-select">
                     <select id="location-dropdown" onchange="goToLocation(this)">
                     <option value="">-- Choose a Location --</option>
-                    <option value="/farmington/features.html">Farmington NM</option>
-                    <option value="/ogden/features.html">Ogden UT</option>
-                    <option value="/sparks/features.html">Reno NV</option>
-                    <option value="/boise/features.html">Boise ID</option>
-                    <option value="/kenosha/features.html">Kenosha WI</option>
-                    <option value="/collins/features.html">Collins CO</option>
+                    <option value="../farmington/features.html">Farmington NM</option>
+                    <option value="../ogden/features.html">Ogden UT</option>
+                    <option value="../sparks/features.html">Reno NV</option>
+                    <option value="../boise/features.html">Boise ID</option>
+                    <option value="../kenosha/features.html">Kenosha WI</option>
+                    <option value="../collins/features.html">Collins CO</option>
                     </select>
                     <span class="glow"></span>
                 </div>
@@ -145,7 +131,7 @@
             }
         }
         </script>
-        <script src="./scripts/burger.js"></script>
-        <script src="./scripts/slider.js"></script>
+        <script src="./scripts/burger.js" defer></script>
+        <script src="./scripts/slider.js" defer></script>
     </body>
 </html>

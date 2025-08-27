@@ -31,7 +31,7 @@
             <div id="stars3"></div>
         </div>
         <header>
-            <a href="../index.html" style="display: inline-block;"><img class="logo" src="../images/logo2.webp" alt="Fly High Logo"></a>
+            <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="../images/logo2.webp" alt="Fly High Logo"></a>
             <nav>
                 <ul>
                     <li><a href="../farmington/features.html">Activities</a></li>
@@ -44,9 +44,8 @@
         </header>
         <header class="mobile-header">
             <div class="booking-container">
-                <img class="booking" src="../images/birthday.png"
-                    alt="Party Booking">
-                <span class="book-link">Book</span>
+                <a href="../farmington/party.html"><img class="booking" src="../images/birthday.png"
+                    alt="Party Booking"><span class="book-link">Book</span></a>
             </div>
             <img class="logo" src="../images/logo.webp" alt="Fly High Logo">
             <div class="menu-container">
@@ -89,7 +88,7 @@
                 document.body.classList.add('loaded');
             });
         </script>
-        <script src="../scripts/burger.js"></script>
-        <script src="../scripts/slider.js"></script>
+        <script src="../scripts/burger.js" defer></script>
+        <script src="../scripts/slider.js" defer></script>
     </body>
 </html>
