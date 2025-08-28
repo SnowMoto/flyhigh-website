@@ -71,12 +71,15 @@ h1 {
     z-index: 1;
 }
 
+h1,
 h2,
-h3 {
+h3,
+.drop {
     font-family: var(--heading);
     color: var(--primary-color);
     text-align: center;
     font-size: 1.5rem;
+    padding: 1rem;
 }
 
 
@@ -449,9 +452,6 @@ p {
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url('../images/private-lg.webp') center/cover no-repeat;
 }
-
-
-
 
 /* Glowing neon-style button */
 .select-btn {
@@ -919,9 +919,9 @@ figure {
     }
 
     h1,
-    h2 {
+    h2,
+    .drop {
         font-size: 2.5rem;
-        padding: 0;
     }
 
     p {
