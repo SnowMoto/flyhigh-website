@@ -18,87 +18,99 @@
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Farmington NM Fly High">
         <link rel="icon" href="../images/favicon_white.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Electrolize&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/stars.css">   
         <link rel="stylesheet" href="./styles/sm-styles.css">
     </head>
     <body>
+        <div class="bg-image"></div>
+        <div class="stars-wrapper">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </div>
         <header>
             <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="./images/logo2.webp" alt="Fly High Logo"></a>
         </header>
         <main>
             <section class="hero">
                 <h1 class="welcome">Welcome to Fly High Trampoline Park</h1>
-                <p>Your ultimate destination for fun and adventure!</p>
-                <p>Select your nearest location to start bouncing:</p>
-
+                    <p class="hero-text">
+                        Looking for a high-flying adventure? <br> Fly High Trampoline Park is the ultimate destination for family fun and excitement.<br>
+                        Enjoy wall-to-wall trampolines, foam pits, dodgeball, and our ninja warrior course.<br>
+                        For younger guests, the soft play area is safe and fun.<br> We also host unforgettable birthday parties with customizable packages.<br>
+                        Join us and elevate your fun to new heights!
+                    </p>
+                <h2>Select your nearest location to start bouncing:</h2>
                 <div class="location-select">
                     <select id="location-dropdown" onchange="goToLocation(this)">
                     <option value="">-- Choose a Location --</option>
-                    <option value="farmington/features.html">Farmington NM</option>
-                    <option value="ogden/features.html">Ogden UT</option>
-                    <option value="sparks/features.html">Reno NV</option>
-                    <option value="boise/features.html">Boise ID</option>
-                    <option value="kenosha/features.html">Kenosha WI</option>
-                    <option value="collins/features.html">Collins CO</option>
+                    <option value="/flyhigh-website/farmington/features.html">Farmington NM</option>
+                    <option value="/flyhigh-website/ogden/features.html">Ogden UT</option>
+                    <option value="/flyhigh-website/sparks/features.html">Reno NV</option>
+                    <option value="/flyhigh-website/boise/features.html">Boise ID</option>
+                    <option value="/flyhigh-website/kenosha/features.html">Kenosha WI</option>
+                    <option value="/flyhigh-website/collins/features.html">Collins CO</option>
                     </select>
                     <span class="glow"></span>
                 </div>
             </section>
+                <h2 style="margin-top: 1.5rem;">Main Activities at Each Park Location</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">Visit your nearest Park to see all the exciting activities we offer!</p>
             <section class="rotating-features">
-            <h2 class="section-title">Our Features</h2>
-            <div class="features-marquee">
-                <div class="marquee-track">
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="⚡ High-Flying fun">🚀 High-Flying Fun</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="🎯 Ninja Course">🎯 Ninja Course</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="💥 Foam Pits">💥 Foam Pits</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="⚡ Zip Line">⚡ Zip Line</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="🏆 Parkour">🏆 Parkour</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="🍕 Party Rooms">🍕 Party Rooms</div>
-                </div>
+                <div class="features-marquee">
+                    <div class="marquee-track">
+                    <div class="feature-card fly" data-tilt>
+                        <div class="card-text" data-text="Soft Play">Soft Play</div>
+                    </div>
+                    <div class="feature-card tramp" data-tilt>
+                        <div class="card-text" data-text="Trampolines">Jump Zone</div>
+                    </div>
+                    <div class="feature-card foam" data-tilt>
+                        <div class="card-text" data-text="Foam Pits">Foam Pits</div>
+                    </div>
+                    <div class="feature-card games" data-tilt>
+                        <div class="card-text" data-text="Games Arcade">Arcade</div>
+                    </div>
+                    <div class="feature-card park" data-tilt>
+                        <div class="card-text" data-text="Parkour">Parkour</div>
+                    </div>
+                    <div class="feature-card party" data-tilt>
+                        <div class="card-text" data-text="Party Rooms">Party Rooms</div>
+                    </div>
 
-                <!-- Duplicate for seamless infinite scroll -->
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="⚡ High-Flying fun">🚀 High-Flying Fun</div>
+                    <!-- Duplicate for seamless infinite scroll -->
+                    <div class="feature-card fly" data-tilt>
+                        <div class="card-text" data-text="Soft Play">Soft Play</div>
+                    </div>
+                    <div class="feature-card tramp" data-tilt>
+                        <div class="card-text" data-text="Trampolines">Jump Zones</div>
+                    </div>
+                    <div class="feature-card foam" data-tilt>
+                        <div class="card-text" data-text="Foam Pits">Foam Pits</div>
+                    </div>
+                    <div class="feature-card games" data-tilt>
+                        <div class="card-text" data-text="Games Arcade">Arcade</div>
+                    </div>
+                    <div class="feature-card park" data-tilt>
+                        <div class="card-text" data-text="Parkour">Parkour</div>
+                    </div>
+                    <div class="feature-card party" data-tilt>
+                        <div class="card-text" data-text="Party Rooms">Party Rooms</div>
+                    </div>
+                    </div>
                 </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="🎯 Ninja Course">🎯 Ninja Course</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="💥 Foam Pits">💥 Foam Pits</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="⚡ Zip Line">⚡ Zip Line</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="🏆 Parkour">🏆 Parkour</div>
-                </div>
-                <div class="feature-card" data-tilt>
-                    <div class="card-text" data-text="🍕 Party Rooms">🍕 Party Rooms</div>
-                </div>
-                </div>
-            </div>
             </section>
 
         </main>
         <footer class="site-footer">
             <div class="footer-content">
                 <div class="footer-links">
-                    <span>Fly High Trampoline Park</span> 
+                    <span>&copy; 2025 Fly High Adventure Park</span> 
+                    <a href="../employment.html">Employment</a>
                 </div>
 
                 <div class="footer-legal">
-                    <span>&copy; 2025 Fly High</span>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service / Use</a>
                 </div>
@@ -112,22 +124,26 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
         <script>
             window.addEventListener("pageshow", function () {
-            const dropdown = document.getElementById("location-dropdown");
-            if (dropdown) {
-            dropdown.selectedIndex = 0; // reset to the first option
+                const dropdown = document.getElementById("location-dropdown");
+                if (dropdown) {
+                dropdown.selectedIndex = 0; 
             }
-        });
-        function goToLocation(select) {
-            if (select.value) {
-            window.location.href = select.value;
+            });
+            function goToLocation(select) {
+                if (select.value) {
+                window.location.href = select.value;
+                }
             }
-        }
-        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.3
-        });
+            VanillaTilt.init(document.querySelectorAll(".feature-card"), {
+                    max: 15,
+                    speed: 600,
+                    easing: "cubic-bezier(.05,.8,.2,1)",
+                    glare: true,
+                    "max-glare": 0.3,
+                    perspective: 1000,
+                    reset: true,          
+                    transition: true     
+            });
         </script>
         <script src="./scripts/burger.js" defer></script>
         <script src="./scripts/slider.js" defer></script>

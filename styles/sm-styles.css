@@ -56,15 +56,11 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 .active {
     color: var(--primary-color);
-}
-
-.welcome {
-    margin-top: 12rem;
-    margin-bottom: 3rem;
 }
 
 h1 {
@@ -80,7 +76,7 @@ h3 {
     font-family: var(--heading);
     color: var(--primary-color);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 
@@ -120,12 +116,12 @@ p {
 /* Nav starts hidden */
 .mobile-nav {
     position: fixed;
-    bottom: 120px; 
+    bottom: 120px;
     left: 0;
     right: 0;
     background: var(--secondary-color);
-    max-height: 0;            
-    overflow: hidden;         
+    max-height: 0;
+    overflow: hidden;
     transition: max-height 0.3s ease;
     z-index: 999;
 }
@@ -134,7 +130,7 @@ p {
 /* Show nav when active */
 .mobile-nav.active {
     max-height: 70vh;
-    overflow-y: auto   ;
+    overflow-y: auto;
 }
 
 /* Nav list styling */
@@ -180,6 +176,10 @@ p {
 }
 
 /*Home Page*/
+
+.welcome {
+    margin-top: 4rem;
+}
 
 .location-select {
     margin-top: 2rem;
@@ -285,14 +285,29 @@ p {
 }
 
 /* Homepage Features */
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    font-family: var(--body); 
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color:  var(--text-color); 
+    max-width: 800px; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius:  3rem;
+    padding: 1rem;
+}
+
 .rotating-features {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     overflow: hidden;
 }
 
 .rotating-features .section-title {
     font-family: var(--heading);
-    font-size: 2rem;
+    font-size: 1rem 0 2rem 0;
     text-align: center;
     color: var(--primary-color);
     margin-bottom: 2rem;
@@ -328,18 +343,19 @@ p {
 .feature-card {
     flex: 0 0 auto;
     margin: 0 1rem;
-    background: url('../images/pheonix.png') no-repeat center center;
-    border-radius: 16px;
+    border-radius: 0 3rem 3rem 3rem;
     padding: 2rem 3rem;
-    width: 280px;
-    height: 320px;
+    width: 150px;
+    height: 150px;
     color: var(--text-color);
     position: relative;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
     overflow: visible;
     transform-style: preserve-3d;
     transform: translateZ(0);
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s cubic-bezier(.05, .8, .2, 1);
+    will-change: transform;
+    perspective: 1000px;
 }
 
 .feature-card::before {
@@ -347,8 +363,8 @@ p {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffff, #ff00cc);
+    padding: 3px;
+    background: linear-gradient(135deg, #ff00cc, #3333ff, #76d450, #ff00cc);
     background-size: 300% 300%;
     animation: borderFlow 6s linear infinite;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -359,17 +375,24 @@ p {
 
 /* Card text with 3D lift */
 .feature-card .card-text {
-    font-family: var(--body);
+    font-family: var(--heading), sans-serif;
     font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    border: 4px solid var(--accent-color);
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: 0 5px 10px var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
     position: absolute;
     bottom: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    color: var(--text-color);
-    transform: translateZ(0);
-    transition: transform 0.4s ease;
+    right: 30%;
+    transform: translateX(0);
+    backface-visibility: hidden;
+    padding: .5rem 1rem;
     z-index: 2;
 }
+
 
 .feature-card:hover .card-text {
     transform: translateZ(20px) rotateX(3deg);
@@ -389,6 +412,45 @@ p {
         background-position: 0% 50%;
     }
 }
+
+.fly {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        /* dark overlay */
+        url('../images/soft-play.jpg') center/cover no-repeat;
+}
+
+.tramp {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/dodge-ball.jpg') center/cover no-repeat;
+}
+
+.foam {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/foam-jump.jpg') center/cover no-repeat;
+}
+
+.games {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/arcade.jpg') center/cover no-repeat;
+}
+
+.park {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../images/course.webp') center/cover no-repeat;
+}
+
+.party {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/private-lg.webp') center/cover no-repeat;
+}
+
+
 
 
 /* Glowing neon-style button */
@@ -418,18 +480,18 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem; 
+    gap: 0.5rem;
     text-decoration: none;
 }
 
 .booking-container img.booking {
-    width: 50px; 
+    width: 50px;
     height: auto;
 }
 
 .booking-container .book-link {
     font-size: 1rem;
-    color: #fff; 
+    color: #fff;
 }
 
 .mobile-header .logo {
@@ -792,11 +854,18 @@ figure {
 }
 
 
-/*----Desktop----*/
+
+
+/*----Desktop-------------------------------------------------*/
 @media (min-width: 750px) {
+    .welcome {
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+    }
+
     .bg-image {
-    background-image: url('../images/kids-jump-lg.webp');
-  }
+        background-image: url('../images/kids-jump-lg.webp');
+    }
 
     .mobile-header,
     .mobile-nav {
@@ -852,19 +921,29 @@ figure {
     h1,
     h2 {
         font-size: 2.5rem;
+        padding: 0;
+        margin: 1rem;
     }
 
     p {
         font-size: 1.25rem;
     }
 
+    .hero-text {
+        font-size: 1.32rem;
+    }
+    
     .site-footer {
         font-size: 2rem;
     }
 
+    .site-footer a {
+        padding: 0 1rem;
+    }
+
     .footer-content {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         text-align: left;
     }
 
@@ -880,6 +959,11 @@ figure {
     .footer-legal span {
         flex-basis: auto;
         margin-right: 10px;
+    }
+
+    .feature-card {
+        width: 250px;
+        height: 250px;
     }
 
     .waiver {
@@ -922,23 +1006,29 @@ figure {
 
     .contact-form input,
     .contact-form textarea {
-    font-size: 1rem;
+        font-size: 1rem;
     }
 
     .contact-form label {
-    font-size: 1rem;
+        font-size: 1rem;
     }
 
     .contact-form button {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
 
     /*Prices and Specials*/
-    .section-title h2, .price-card h3, .special-card h3 {
+    .section-title h2,
+    .price-card h3,
+    .special-card h3 {
         font-size: 2.25rem;
     }
 
-    .note, .rates-special p, .price-card span, .price-card p, .special-card p {
+    .note,
+    .rates-special p,
+    .price-card span,
+    .price-card p,
+    .special-card p {
         font-size: 1.5rem;
     }
 
