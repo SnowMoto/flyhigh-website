@@ -130,6 +130,12 @@
             window.location.href = select.value;
             }
         }
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3
+        });
         </script>
         <script src="./scripts/burger.js" defer></script>
         <script src="./scripts/slider.js" defer></script>

@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
-
 :root {
     --primary-color: #00aaff;
     --secondary-color: #000;
@@ -31,10 +27,10 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/kids-jump.webp');
+    background-image: url('../images/kids-jump-sm.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     z-index: 0;
 }
 
@@ -104,10 +100,9 @@ p {
     left: 0;
     right: 0;
     background: var(--secondary-color);
-    display: flex;
     align-items: center;
     padding: 5px 10px;
-    z-index: 1000;
+    z-index: 10000;
     font-family: Arial, sans-serif;
     gap: 3rem;
 }
@@ -125,18 +120,21 @@ p {
 /* Nav starts hidden */
 .mobile-nav {
     position: fixed;
-    bottom: 50px;
+    bottom: 120px; 
     left: 0;
     right: 0;
     background: var(--secondary-color);
-    max-height: 0;
-    overflow: hidden;
+    max-height: 0;            
+    overflow: hidden;         
+    transition: max-height 0.3s ease;
     z-index: 999;
 }
 
+
 /* Show nav when active */
 .mobile-nav.active {
-    max-height: 300px;
+    max-height: 70vh;
+    overflow-y: auto   ;
 }
 
 /* Nav list styling */
@@ -233,7 +231,6 @@ p {
     filter: blur(8px);
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
     animation-duration: 10s;
-    /* speed up animation on hover */
 }
 
 /* Selected (focus) → blue glow */
@@ -421,18 +418,18 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem; /* space between image and text */
+    gap: 0.5rem; 
     text-decoration: none;
 }
 
 .booking-container img.booking {
-    width: 50px; /* adjust as needed */
+    width: 50px; 
     height: auto;
 }
 
 .booking-container .book-link {
     font-size: 1rem;
-    color: #fff; /* or any desired color */
+    color: #fff; 
 }
 
 .mobile-header .logo {
@@ -443,6 +440,8 @@ p {
 /*Footer*/
 
 .site-footer {
+    position: relative;
+    left: 0;
     background-color: #000;
     color: var(--text-color);
     padding: 30px 20px;
@@ -451,6 +450,7 @@ p {
     border-top: 2px solid #444;
     width: 100%;
     overflow: hidden;
+    z-index: 100;
 }
 
 .footer-content {
@@ -794,6 +794,9 @@ figure {
 
 /*----Desktop----*/
 @media (min-width: 750px) {
+    .bg-image {
+    background-image: url('../images/kids-jump-lg.webp');
+  }
 
     .mobile-header,
     .mobile-nav {

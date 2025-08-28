@@ -3,6 +3,8 @@ const contents = document.querySelectorAll('.tab-content');
 
 // Set default tab on load
 document.addEventListener('DOMContentLoaded', () => {
+  if (!tabs.length || !contents.length) return;
+
   const defaultTab = tabs[0];
   const defaultContent = document.getElementById(defaultTab.dataset.tab);
 
@@ -20,27 +22,14 @@ tabs.forEach(tab => {
     const newContent = document.getElementById(tabId);
     const activeContent = document.querySelector('.tab-content.visible');
 
-    if (activeContent === newContent) return;
+    if (!newContent || activeContent === newContent) return;
 
     // Update tab buttons
     tabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
 
-    // Fade out current content
-    activeContent.classList.remove('visible');
-    activeContent.classList.add('fading-out');
-
-    // After fade-out ends, switch content
-    setTimeout(() => {
-      activeContent.classList.remove('active', 'fading-out');
-      newContent.classList.add('active', 'visible');
-    }, 500); // Match your CSS transition duration
+    // Instantly switch content (no fade-out)
+    contents.forEach(c => c.classList.remove('active', 'visible'));
+    newContent.classList.add('active', 'visible');
   });
 });
-
-VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.3
-        });
