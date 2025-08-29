@@ -624,15 +624,16 @@ figure {
     color: var(--text-color);
     font-family: var(--body);
     font-size: 1rem;
-    transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
 .accordion-content.open {
+    max-height: 1000px;
     padding: 1rem;
 }
 
 .accordion-content.open a {
     color: var(--accent-color);
+    max-height: 1000px ;
 }
 
 .contact-container {

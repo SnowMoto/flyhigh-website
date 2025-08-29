@@ -18,11 +18,9 @@
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Farmington NM Fly High">
         <link rel="icon" href="../images/favicon_white.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../styles/stars.css">
-        <link rel="stylesheet" href="../farmington/fm-styles.css">
-        <link rel="stylesheet" href="../styles/sm-styles.css">
-        <link rel="stylesheet" href="../styles/med-styles.css">
-        <link rel="stylesheet" href="../styles/lg-styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Electrolize&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/stars.css">
+        <link rel="stylesheet" href="./styles/sm-styles.css">
     </head>
     <body>
         <div class="bg-image"></div>
@@ -32,38 +30,7 @@
             <div id="stars3"></div>
         </div>
         <header>
-            <img class="logo" src="../images/logo2.webp" alt="Fly High Logo">
-            <nav>
-            <ul>
-                <li><a href="<%= baseUrl %>/features.html">Activities</a></li>
-                <li><a href="<%= baseUrl %>/rates.html">Prices</a></li>
-                <li><a href="<%= baseUrl %>/party.html">Parties</a></li>
-                <li><a href="<%= baseUrl %>/waiver.html">Waiver</a></li>
-                <li><a href="<%= baseUrl %>/info.html">Contact</a></li>
-            </ul>
-            </nav>
-        </header>
-        <header class="mobile-header">
-            <div class="booking-container">
-                <img class="booking" src="../images/birthday.png"
-                    alt="Party Booking">
-                <span class="book-link">Book</span>
-            </div>
-            <img class="logo" src="../images/logo.webp" alt="Fly High Logo">
-            <div class="menu-container">
-                <button class="burger" aria-label="Toggle menu"
-                    aria-expanded="false">&#9776;</button>
-                <span class="menu-link">Menu</span>
-            </div>
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="../farmington/features.html">Activities</a></li>
-                    <li><a href="../farmington/rates.html">Prices</a></li>
-                    <li><a href="../farmington/party.html">Parties</a></li>
-                    <li><a href="../farmington/waiver.html">Waiver</a></li>
-                    <li><a href="../farmington/info.html">Contact</a></li>
-                </ul>
-            </nav>
+            <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="./images/logo2.webp" alt="Fly High Logo"></a>
         </header>
         <main class="accordion-container">
             <h1>Fly High Terms & Conditions / Terms of Use</h1>
@@ -117,7 +84,7 @@
                     PRIVACY
                 </button>
                 <div class="accordion-content" id="privacy" role="region"
-                    aria-labelledby="privacy-header" hidden>
+                    aria-labelledby="privacy-header">
                     <p>The Fly High privacy policy is incorporated into
                         these terms of use.</p>
                 </div>
@@ -753,16 +720,10 @@
         <footer class="site-footer">
             <div class="footer-content">
                 <div class="footer-links">
-                    <span>Fly High Farmington:</span>
-                    <a href="../farmington/waiver.html">Waiver</a>
-                    <a href="../farmington/info.html">Contact</a>
-                    <a href="../employment.html">Employment</a>
-                </div>
-
-                <div class="footer-legal">
-                    <span>&copy; 2025 Farmington Fly High</span>
-                    <a href="../privacy.html">Privacy Policy</a>
-                    <a href="../terms.html">Terms of Condition / Use</a>
+                    <span>&copy; 2025 Fly High Adventure Park</span>
+                    <a href="./employment.html">Employment</a>
+                    <a href="./privacy.html">Privacy Policy</a>
+                    <a href="./terms.html">Terms of Use</a>
                 </div>
             </div>
         </footer>
@@ -771,6 +732,6 @@
                 document.body.classList.add('loaded');
             });
         </script>
-        <script src="../scripts/burger.js"></script>
+        <script src="./scripts/burger.js"></script>
     </body>
 </html>
