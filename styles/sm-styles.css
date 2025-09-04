@@ -34,7 +34,7 @@ p{font-family:var(--body);color:var(--text-color);text-align:center;margin:.5rem
 .card-content h3{font-family:var(--heading);font-size:1.8rem;color:var(--primary-color);margin-bottom:.5rem}
 .card-content p{font-family:var(--body);font-size:1rem;color:var(--text-color);opacity:.85;margin-bottom:1rem}
 .hero-text{display:flex;justify-content:center;font-family:var(--body);font-size:1.2rem;line-height:1.6;color:var(--text-color);max-width:800px;text-align:center;background-color:rgba(0,0,0,.8);border-radius:3rem;padding:1rem}
-.rotating-features{padding:2rem 1rem;overflow:hidden}
+.rotating-features{padding:2rem 1rem 1rem 3rem;overflow:hidden}
 .rotating-features .section-title{font-family:var(--heading);font-size:1rem 0 2rem 0;text-align:center;color:var(--primary-color);margin-bottom:2rem}
 .features-marquee{width:100%;overflow:visible;position:relative;perspective:1000px}
 .marquee-track{display:flex;width:max-content;animation:marquee 40s linear infinite;transform-style:preserve-3d}
