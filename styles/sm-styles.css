@@ -419,7 +419,7 @@ p {
 .fly {
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('../images/soft-play.png') center/cover no-repeat;
+        url('../images/soft-play.webp') center/cover no-repeat;
 }
 
 .tramp {
