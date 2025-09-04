@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{--primary-color:#00aaff;--secondary-color:#000;--text-color:white;--accent-color:#76d450;--accent-color-2:#8017e2;--heading:'Iceland',sans-serif;--body:"Electrolize",sans-serif}
 body,html{height:100%;margin:0}
 footer,header,main{position:relative;z-index:2}
@@ -153,3 +154,1116 @@ p{font-size:1.25rem}
 .note,.price-card p,.price-card span,.rates-special p,.special-card p{font-size:1.5rem}
 .focus{font-size:1.15rem}
 }
+=======
+:root {
+    --primary-color: #00aaff;
+    --secondary-color: #000;
+    --text-color: white;
+    --accent-color: #76d450;
+    --accent-color-2: #8017e2;
+    --heading: 'Iceland', sans-serif;
+    --body: "Electrolize", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+header,
+main,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/billboard.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: 0;
+}
+
+/*.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}*/
+
+header {
+    display: none;
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.active {
+    color: var(--primary-color);
+}
+
+h1 {
+    display: block;
+    font-family: var(--heading);
+    color: var(--primary-color);
+    text-align: center;
+    z-index: 1;
+}
+
+h1,
+h2,
+h3,
+.drop {
+    font-family: var(--heading);
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+
+p {
+    font-family: var(--body);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+/* Burger button */
+.mobile-header {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    align-items: center;
+    padding: 5px 10px;
+    z-index: 10000;
+    font-family: Arial, sans-serif;
+    gap: 3rem;
+}
+
+.mobile-header .burger {
+    font-size: 25px;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    margin: 0%;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Nav starts hidden */
+.mobile-nav {
+    position: fixed;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+}
+
+
+/* Show nav when active */
+.mobile-nav.active {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Nav list styling */
+.mobile-nav ul {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.mobile-nav a.active,
+.mobile-nav a:hover {
+    display: block;
+    color: #0090da;
+    font-weight: bold;
+}
+
+.burger.close {
+    transform: scale(1.5);
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+}
+
+.menu-link {
+    font-family: var(--body);
+    color: var(--text-color);
+    font-size: .85rem;
+    text-decoration: none;
+}
+
+/*Home Page*/
+
+.welcome {
+    margin-top: 4rem;
+}
+
+.location-select {
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.location-select select {
+    position: relative;
+    font-family: var(--body);
+    font-size: 1.2rem;
+    padding: 0.75rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    appearance: none;
+    /* hides default arrow */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Neon border using ::before */
+.location-select::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 10px;
+    background: linear-gradient(45deg,
+            #ff0000, #ff7300, #fffb00,
+            #48ff00, #00ffd5, #002bff,
+            #7a00ff, #ff00c8, #ff0000);
+    background-size: 500%;
+    filter: blur(5px);
+    z-index: 0;
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover state → intensify rainbow */
+.location-select:hover::before {
+    filter: blur(8px);
+    box-shadow: 0 0 25px var(--accent-color);
+    animation-duration: 10s;
+}
+
+/* Selected (focus) → blue glow */
+.location-select select:focus+.glow,
+.location-select select:active+.glow {
+    background: #0090da;
+    filter: blur(12px);
+    box-shadow: 0 0 20px #0090da, 0 0 40px #0090da;
+    animation: none;
+}
+
+/* Glowing rainbow animation */
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Custom dropdown arrow */
+.location-select select {
+    background: #111 url("data:image/svg+xml;utf8,<svg fill='white' height='20' width='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M5.516 7.548l4.484 4.482 4.484-4.482L16 9.064l-6 6-6-6z'/></svg>") no-repeat right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-family: var(--heading);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-family: var(--body);
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    margin-bottom: 1rem;
+}
+
+/* Homepage Features */
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    font-family: var(--body); 
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color:  var(--text-color); 
+    max-width: 800px; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius:  3rem;
+    padding: 1rem;
+}
+
+.rotating-features {
+    padding: 2rem 1rem;
+    overflow: hidden;
+}
+
+.rotating-features .section-title {
+    font-family: var(--heading);
+    font-size: 1rem 0 2rem 0;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* Marquee container with perspective */
+.features-marquee {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    perspective: 1000px;
+}
+
+/* Track that moves */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Neon glowing card with 3D setup */
+.feature-card {
+    flex: 0 0 auto;
+    margin: 0 1rem;
+    border-radius: 0 3rem 3rem 3rem;
+    padding: 2rem 3rem;
+    width: 150px;
+    height: 150px;
+    color: var(--text-color);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+    overflow: visible;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    transition: transform 0.6s cubic-bezier(.05, .8, .2, 1);
+    will-change: transform;
+    perspective: 1000px;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 3px;
+    background: linear-gradient(135deg, #ff00cc, #3333ff, #76d450, #ff00cc);
+    background-size: 300% 300%;
+    animation: borderFlow 6s linear infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+/* Card text with 3D lift */
+.feature-card .card-text {
+    font-family: var(--heading), sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    border: 4px solid var(--accent-color);
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: 0 5px 10px var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 30%;
+    transform: translateX(0);
+    backface-visibility: hidden;
+    padding: .5rem 1rem;
+    z-index: 2;
+}
+
+
+.feature-card:hover .card-text {
+    transform: translateZ(20px) rotateX(3deg);
+}
+
+/* Optional animated border */
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.fly {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../images/soft-play.webp') center/cover no-repeat;
+}
+
+.tramp {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/dodge-ball.jpg') center/cover no-repeat;
+}
+
+.foam {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/foam-jump.jpg') center/cover no-repeat;
+}
+
+.games {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/arcade.jpg') center/cover no-repeat;
+}
+
+.park {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../images/course.webp') center/cover no-repeat;
+}
+
+.party {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/private-lg.webp') center/cover no-repeat;
+}
+
+/* Glowing neon-style button */
+.select-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-family: var(--heading);
+    color: var(--text-color);
+    background: var(--accent-color-2);
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 10px var(--accent-color-2), 0 0 20px var(--accent-color-2);
+    transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color);
+    transform: scale(1.05);
+}
+
+
+/*Booking Icon*/
+.booking-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.booking-container img.booking {
+    width: 50px;
+    height: auto;
+}
+
+.booking-container .book-link {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.mobile-header .logo {
+    max-width: 30%;
+    height: auto;
+}
+
+/*Feature Page*/
+/* Alternating Feature Layout - Mobile First */
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.25);
+}
+
+.feature-image {
+  width: 100%;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-text {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.feature-text h3 {
+  font-family: var(--heading);
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.feature-text p {
+  font-family: var(--body);
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/*Footer*/
+
+.site-footer {
+    position: relative;
+    left: 0;
+    background-color: #000;
+    color: var(--text-color);
+    padding: 30px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    border-top: 2px solid #444;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-links,
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    line-height: 1.6;
+}
+
+.footer-links span,
+.footer-legal span {
+    flex-basis: 100%;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.site-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #1da1f2;
+    text-decoration: underline;
+}
+
+/*Form*/
+iframe {
+    width: 100%;
+    height: 75vh;
+    display: block;
+    border: none;
+}
+
+figure {
+    margin-bottom: 3rem;
+
+}
+
+.waiver-wrapper {
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    justify-self: center;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.waiver {
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    border: none;
+}
+
+.party-book {
+    max-width: 800px
+}
+
+/*Policy*/
+.accordion-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0 3rem 0;
+}
+
+.accordion {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 1rem;
+    font-family: var(--heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline-offset: 2px;
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: 2px solid var(--primary-color);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1rem;
+    color: var(--text-color);
+    font-family: var(--body);
+    font-size: 1rem;
+}
+
+.accordion-content.open {
+    max-height: 1000px;
+    padding: 1rem;
+}
+
+.accordion-content.open a {
+    color: var(--accent-color);
+    max-height: 1000px ;
+}
+
+.contact-container {
+    margin: 2rem auto;
+}
+
+.contact-location h3 {
+    margin-bottom: 1rem;
+}
+
+/*Contact/Park Info*/
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 25%;
+    /* sets aspect ratio */
+    position: relative;
+    margin: 3rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: brightness(75%);
+}
+
+/* Contact Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 3rem auto;
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+    /* Darker for better contrast */
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Inputs and Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    font-family: var(--body);
+    font-size: 0.75rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: rgba(71, 71, 71, 0.527);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.contact-form textarea {
+    min-height: 8rem;
+}
+
+.contact-form label {
+    color: var(--text-color);
+    font-family: var(--body);
+    font-size: 1.5rem;
+}
+
+/* Placeholder styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus glow effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 12px var(--accent-color);
+}
+
+/* Pricing Page */
+.rates-specials {
+    padding: 1rem 0 2rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title h2 {
+    font-family: var(--heading);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.price-card {
+    position: relative;
+    background-color: #000;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 15px var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.price-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/pheonix.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+.price-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--accent-color);
+}
+
+.price-card h3 {
+    font-family: var(--heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.price-card .price {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
+}
+
+.price-card span {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Price Page Divider */
+.section-divider {
+    border: none;
+    height: .2rem;
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--primary-color), var(--accent-color));
+    margin: 2.5rem 0;
+}
+
+/* Price Page Specials Grid */
+.specials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.special-card {
+    position: relative;
+    background-color: #000;
+    border-radius: 0 50px 50px 50px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 15px var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.special-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.special-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--accent-color);
+}
+
+.special-card h3 {
+    font-family: var(--heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+.special-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+
+
+
+/*----Desktop-------------------------------------------------*/
+@media (min-width: 750px) {
+    .welcome {
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    .bg-image {
+        background-image: url('../images/billboard.png');
+    }
+
+    .mobile-header,
+    .mobile-nav {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        background-color: #000;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 2rem;
+        z-index: 1000;
+        top: 0;
+    }
+
+    header nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+    }
+
+    header nav ul li a {
+        font-family: var(--body);
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    header nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        max-width: 30%;
+        height: auto;
+        display: block;
+    }
+
+    h1 {
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    .drop {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .hero-text {
+        font-size: 1.32rem;
+    }
+    
+    /*Feature Page*/
+
+        .feature-section {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 400px;
+    margin: 3rem auto;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    }
+
+    .feature-section.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .feature-image {
+        flex: 1 1 50%;
+        min-height: auto;
+    }
+
+    .feature-text {
+        flex: 1 1 50%;
+        text-align: left;
+        padding: 2rem 3rem;
+    }
+
+    .feature-text h3 {
+        font-size: 2rem;
+    }
+
+    .feature-text p {
+        font-size: 1.25rem;
+    }
+
+    /*Footer*/
+    .site-footer {
+        font-size: 2rem;
+    }
+
+    .site-footer a {
+        padding: 0 1rem;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .footer-links,
+    .footer-legal {
+        font-size: 1.25rem;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .footer-links span,
+    .footer-legal span {
+        flex-basis: auto;
+        margin-right: 10px;
+    }
+
+    .feature-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .waiver {
+        margin-top: 3rem;
+    }
+
+    .form-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    /*Policy*/
+    .accordion-header {
+        font-size: 2rem;
+    }
+
+    .accordion-content p,
+    .accordion-content li {
+        font-size: 1.25rem;
+    }
+
+    /*Park Info/Contact*/
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .contact-container>div:first-child {
+        flex: 1 1 300px;
+    }
+
+    .contact-container>.accordion-container,
+    .contact-container>.accordion {
+        flex: 1 1 400px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+    }
+
+    .contact-form button {
+        font-size: 1.5rem;
+    }
+
+    /*Prices and Specials*/
+    .section-title h2,
+    .price-card h3,
+    .special-card h3 {
+        font-size: 2.25rem;
+    }
+
+    .note,
+    .rates-special p,
+    .price-card span,
+    .price-card p,
+    .special-card p {
+        font-size: 1.5rem;
+    }
+
+    .focus {
+        font-size: 1.15rem;
+    }
+}
+>>>>>>> dcfa931b2dbd32df877a398aa6ecf069393c19aa
