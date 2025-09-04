@@ -52,10 +52,10 @@ to{transform:translateX(-50%)}
 100%{background-position:0 50%}
 }
 .fly{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/soft-play.webp) center/cover no-repeat}
-.tramp{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/dodge-ball.webp) center/cover no-repeat}
-.foam{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/foam-jump.webp) center/cover no-repeat}
-.games{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/arcade.webp) center/cover no-repeat}
-.park{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/course.webp) center/cover no-repeat}
+.tramp{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/dodge-ball.jpg) center/cover no-repeat}
+.foam{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/foam-jump.jpg) center/cover no-repeat}
+.games{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/arcade.jpg) center/cover no-repeat}
+.park{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/ninja-course.webp) center/cover no-repeat}
 .party{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/private-lg.webp) center/cover no-repeat}
 .select-btn{display:inline-block;padding:.7rem 1.5rem;font-size:1rem;font-family:var(--heading);color:var(--text-color);background:var(--accent-color-2);border:none;border-radius:50px;text-decoration:none;box-shadow:0 0 10px var(--accent-color-2),0 0 20px var(--accent-color-2);transition:all .3s ease}
 .select-btn:hover{background:var(--accent-color);box-shadow:0 0 15px var(--accent-color),0 0 30px var(--accent-color);transform:scale(1.05)}
@@ -100,7 +100,7 @@ figure{margin-bottom:3rem}
 .section-title h2{font-family:var(--heading);font-size:2rem;margin-bottom:1.5rem;color:var(--primary-color);text-align:center}
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));justify-content:center;align-items:stretch;gap:1.5rem}
 .price-card{position:relative;background-color:#000;border-radius:12px;padding:1.5rem;text-align:center;box-shadow:0 0 15px var(--primary-color);transition:transform .3s ease,box-shadow .3s ease;overflow:hidden}
-.price-card::before{content:"";position:absolute;inset:0;background-image:url(../images/pheonix.webp);background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.25;z-index:0}
+.price-card::before{content:"";position:absolute;inset:0;background-image:url(../images/pheonix.png);background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.25;z-index:0}
 .price-card>*{position:relative;z-index:1}
 .price-card:hover{transform:translateY(-6px);box-shadow:0 0 25px var(--accent-color)}
 .price-card h3{font-family:var(--heading);font-size:1.5rem;color:var(--primary-color)}
