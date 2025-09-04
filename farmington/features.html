@@ -20,6 +20,7 @@
         <link rel="icon" href="../images/favicon_white.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Electrolize&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../styles/stars.css">
+        <link rel="stylesheet" href="../farmington/fm-styles.css">
         <link rel="stylesheet" href="../styles/sm-styles.css">
     </head>
     <body>
@@ -30,43 +31,137 @@
             <div id="stars3"></div>
         </div>
         <header>
-            <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="../images/logo2.webp" alt="Fly High Logo"></a>
+            <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="../images/logo-main.png" alt="Fly High Logo"></a>
             <nav>
                 <ul>
-                    <li><a href="../farmington/features.html" class="active">Activities</a></li>
+                    <li><a href="../farmington/features.html" class="active">Features</a></li>
                     <li><a href="../farmington/rates.html">Prices</a></li>
                     <li><a href="../farmington/party.html">Parties</a></li>
                     <li><a href="../farmington/waiver.html">Waiver</a></li>
                     <li><a href="../farmington/info.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-header">
-                <div class="booking-container">
-                    <a href="../farmington/party.html"><img class="booking" src="../images/birthday.png"
-                    alt="Party Booking"><span class="book-link">Book</span></a>
-                </div>
-                <link rel="preload" as="image" href="/images/logo2.webp">
-                <div class="menu-container">
-                    <button class="burger" aria-label="Toggle menu"
-                        aria-expanded="false">&#9776;</button>
-                    <span class="menu-link">Menu</span>
-                </div>
-                <nav class="mobile-nav">
-                    <ul>
-                        <li><a href="/features/<%= location %>" class="active">Activities</a></li>
-                        <li><a href="/rates/<%= location %>">Prices</a></li>
-                        <li><a href="/party/<%= location %>">Parties</a></li>
-                        <li><a href="/waiver/<%= location %>">Waiver</a></li>
-                        <li><a href="/info/<%= location %>">Contact</a></li>
-                    </ul>
-                </nav>
+        </header>
+        <header class="mobile-header">
+            <div class="booking-container">
+                <a href="../farmington/party.html"><img class="booking" src="../images/birthday.png"
+                    alt="Party Booking"><span class="book-link" loading="lazy">Book</span></a>
             </div>
+            <img class="logo" rel="preload" as="image" src="../images/logo-main.png"
+                alt="Fly High Logo">
+            <div class="menu-container">
+                <button class="burger" aria-label="Toggle menu"
+                    aria-expanded="false">&#9776;</button>
+                <span class="menu-link">Menu</span>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="../farmington/features.html" class="active">Features</a></li>
+                    <li><a href="../farmington/rates.html">Prices</a></li>
+                    <li><a href="../farmington/party.html">Parties</a></li>
+                    <li><a href="../farmington/waiver.html">Waiver</a></li>
+                    <li><a href="../farmington/info.html">Contact</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
-        <div class="hero">
-            <h1>Fly High Farmington NM Features</h1>
-        </div>
+            <div class="hero" style="margin-bottom: 0;">
+                <h1 style="margin-bottom: 0;">Fly High Farmington NM Features</h1>
+                <p class="hero-text" style="background-color: transparent;">Explore our exciting attractions! From trampolines to ninja courses, we’ve got activities for everyone.</p>
+            </div>
+
+            <!-- Alternating Layout -->
+            <section class="feature-section">
+                <div class="feature-image basketball"></div>
+                <div class="feature-text">
+                <h3>Basketball</h3>
+                <p>Show off your slam dunks and three-pointers on our full-size basketball court.</p>
+                </div>
+            </section>
+
+            <section class="feature-section reverse">
+                <div class="feature-image dodge"></div>
+                <div class="feature-text">
+                    <h3>Dodgeball</h3>
+                    <p>Jump, duck, and dive into high-energy dodgeball games on wall-to-wall trampolines—fun for all ages!</p>
+                </div>
+            </section>
+
+            <section class="feature-section">
+                <div class="feature-image joust"></div>
+                <div class="feature-text">
+                <h3>Jousting</h3>
+                <p>Challenge your friends to a duel on our soft pad jousting arena—may the best jumper win!</p>
+                </div>
+            </section>
+
+            <section class="feature-section reverse">
+                <div class="feature-image box"></div>
+                <div class="feature-text">
+                <h3>Parkour Box</h3>
+                <p>Test your agility and balance as you navigate through our challenging parkour box.</p>
+                </div>
+            </section>
+
+            <section class="feature-section">
+                <div class="feature-image mezz"></div>
+                <div class="feature-text">
+                <h3>Mezzanine</h3>
+                <p>Test your bravery as you leap from our mezzanine level into the foam pit below. Also enjoy a unique view of the park from above!</p>
+                </div>
+            </section>
+
+            <section class="feature-section reverse">
+                <div class="feature-image ninja"></div>
+                <div class="feature-text">
+                <h3>Ninja Course</h3>
+                <p>Challenge your strength, speed, and agility on our action-packed ninja warrior course.</p>
+                </div>
+            </section>
+
+            <section class="feature-section">
+                <div class="feature-image soft"></div>
+                <div class="feature-text">
+                    <h3>Soft Play</h3>
+                    <p>Let your little ones explore and play in our safe and fun soft play area, designed just for them!</p>
+                </div>
+            </section>
+
+            
+            <section class="feature-section reverse">
+                <div class="feature-image bag"></div>
+                <div class="feature-text">
+                    <h3>Stunt Bag</h3>
+                    <p>Show your best moves as you jump and flip onto our giant stunt bag!</p>
+                </div>
+            </section>
+
+            <section class="feature-section">
+                <div class="feature-image super"></div>
+                <div class="feature-text">
+                    <h3>Super Performance Trampolines</h3>
+                    <p>Experience the ultimate bounce on our Super Performance Trampolines, designed for maximum air time and fun!</p>
+                </div>
+            </section>
+
+            
+            <section class="feature-section reverse">
+                <div class="feature-image open-court"></div>
+                <div class="feature-text">
+                    <h3>Trampoline Open Court</h3>
+                    <p>Jump around and enjoy free bouncing in our spacious trampoline open court!</p>
+                </div>
+            </section>
+
+            <section class="feature-section">
+                <div class="feature-image zip"></div>
+                <div class="feature-text">
+                    <h3>Zip Line</h3>
+                    <p>Soar through the air on our thrilling zip line—an adventure you won't forget!</p>
+                </div>
+            </section>
         </main>
+
         <footer class="site-footer">
             <div class="footer-content">
                 <div class="footer-links">

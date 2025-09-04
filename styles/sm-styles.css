@@ -27,14 +27,14 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/kids-jump-sm.webp');
+    background-image: url('../images/billboard.png');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
     z-index: 0;
 }
 
-.bg-image::before {
+/*.bg-image::before {
     content: "";
     position: absolute;
     top: 0;
@@ -43,7 +43,7 @@ footer {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
-}
+}*/
 
 header {
     display: none;
@@ -499,6 +499,45 @@ p {
     height: auto;
 }
 
+/*Feature Page*/
+/* Alternating Feature Layout - Mobile First */
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.25);
+}
+
+.feature-image {
+  width: 100%;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-text {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.feature-text h3 {
+  font-family: var(--heading);
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.feature-text p {
+  font-family: var(--body);
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
 /*Footer*/
 
 .site-footer {
@@ -865,7 +904,7 @@ figure {
     }
 
     .bg-image {
-        background-image: url('../images/kids-jump-lg.webp');
+        background-image: url('../images/billboard.png');
     }
 
     .mobile-header,
@@ -934,6 +973,40 @@ figure {
         font-size: 1.32rem;
     }
     
+    /*Feature Page*/
+
+        .feature-section {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 400px;
+    margin: 3rem auto;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    }
+
+    .feature-section.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .feature-image {
+        flex: 1 1 50%;
+        min-height: auto;
+    }
+
+    .feature-text {
+        flex: 1 1 50%;
+        text-align: left;
+        padding: 2rem 3rem;
+    }
+
+    .feature-text h3 {
+        font-size: 2rem;
+    }
+
+    .feature-text p {
+        font-size: 1.25rem;
+    }
+
+    /*Footer*/
     .site-footer {
         font-size: 2rem;
     }
