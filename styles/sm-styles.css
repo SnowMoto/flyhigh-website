@@ -419,7 +419,6 @@ p {
 .fly {
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        /* dark overlay */
         url('../images/soft-play.png') center/cover no-repeat;
 }
 
