@@ -33,6 +33,7 @@
 }
 .soft {
     background:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
         url('../images/fm/fm-softplay.png') center/cover no-repeat;
 }
 .bag {
@@ -42,7 +43,6 @@
 }
 .super {
     background:
-        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
         url('../images/fm/fm-highperformance.png') center/cover no-repeat;
 }
 .open-court {
