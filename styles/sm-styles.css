@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root{--primary-color:#00aaff;--secondary-color:#000;--text-color:white;--accent-color:#76d450;--accent-color-2:#8017e2;--heading:'Iceland',sans-serif;--body:"Electrolize",sans-serif}
 body,html{height:100%;margin:0}
 footer,header,main{position:relative;z-index:2}
@@ -154,7 +153,6 @@ p{font-size:1.25rem}
 .note,.price-card p,.price-card span,.rates-special p,.special-card p{font-size:1.5rem}
 .focus{font-size:1.15rem}
 }
-=======
 :root {
     --primary-color: #00aaff;
     --secondary-color: #000;
@@ -1266,4 +1264,3 @@ figure {
         font-size: 1.15rem;
     }
 }
->>>>>>> dcfa931b2dbd32df877a398aa6ecf069393c19aa
