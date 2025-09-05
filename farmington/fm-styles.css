@@ -2,7 +2,7 @@
 .dodge{background:url(../images/fm/fm-dodgeball.png) center/cover no-repeat}
 .joust{background:url(../images/fm/fm-jousting.png) center/cover no-repeat}
 .box{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/fm/fm-park.png) center/cover no-repeat}
-.mezz{background:url(../images/fm/fm-mezzanine.png) center/cover no-repeat}
+.mezz{background:url(../images/fm/fm-mezzanine-min.png) center/cover no-repeat}
 .ninja{background:url(../images/fm/fm-ninja.png) center/cover no-repeat}
 .soft{background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url(../images/fm/fm-softplay.png) center/cover no-repeat}
 .bag{background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url(../images/fm/fm-box.webp) center/cover no-repeat}
