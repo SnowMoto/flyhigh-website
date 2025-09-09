@@ -58,80 +58,34 @@
                 <ul>
                     <li><a href="../farmington/features.html">Features</a></li>
                     <li><a href="../farmington/rates.html">Prices</a></li>
-                    <li><a href="../farmington/party.html" class="active">Parties</a></li>
+                    <li><a href="../farmington/party.html">Parties</a></li>
                     <li><a href="../farmington/waiver.html">Waiver</a></li>
-                    <li><a href="../farmington/info.html">Contact</a></li>
+                    <li><a href="../farmington/info.html" class="active">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <h1>Fly High Trampoline Park<br> Farmington Info.</h1>
-            <section class="contact-container">
-                <!-- Location -->
-                <div class="contact-location">
-                    <h3>Location:</h3>
-                    <p style="line-height: 1.77em;">
-                        1650 E. 20th St.<br>
-                        Farmington, NM 87401<br>
-                        <a href="tel:505-787-2677" style="color: #76d450;">Call
-                            Us: 505-787-2677</a>
-                    </p>
+            <h1 >Fly High Adventure Park<br> Farmington NM Info.</h1>
+            <section class="contact-wrapper">
+                <div class="contact-container">
+                    <!-- Location -->
+                    <div class="contact-location">
+                        <h3>Location:</h3>
+                        <p style="line-height: 1.77em;">
+                            1650 E. 20th St.<br>
+                            Farmington, NM 87401<br>
+                            <a href="tel:505-787-2677" style="color: #76d450;">Call
+                                Us: 505-787-2677</a>
+                        </p>
+                    </div>
+
                 </div>
-
-                <!-- Hours -->
-                <div class="contact-hours">
-                    <div class="accordion">
-                        <button class="accordion-header" aria-expanded="false">
-                            School Year Hours
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>Mon: 10am - 9pm</li>
-                                <li>Tue-Thu: 12pm - 9pm</li>
-                                <li>Fri-Sat: 10am - 11pm</li>
-                                <li>Sun: 10am - 8pm</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="accordion">
-                        <button class="accordion-header" aria-expanded="false">
-                            Spring Break / Summer Hours
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>Mon: 10am - 9pm</li>
-                                <li>Tue-Thu: 10am - 9pm</li>
-                                <li>Fri-Sat: 10am - 11pm</li>
-                                <li>Sun: 10am - 8pm</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="accordion">
-                        <button class="accordion-header" aria-expanded="false">
-                            Holiday Hours
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>July 4th: 10am - 6pm</li>
-                                <li>Christmas Eve: 10am - 2pm</li>
-                                <li>Christmas Day: Closed</li>
-                                <li>New Year's Eve: 10am - 9pm</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://maps.google.com/maps?width=400&amp;height=200&amp;hl=en&amp;q=1650%20E.%2020th%20St.%20Farmington,%20NM%2087401+(Fly%20High%20Trampoline%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    </iframe>
                 </div>
             </section>
-            <div class="map-container">
-                <iframe
-                    src="https://maps.google.com/maps?width=400&amp;height=200&amp;hl=en&amp;q=1650%20E.%2020th%20St.%20Farmington,%20NM%2087401+(Fly%20High%20Trampoline%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0">
-                </iframe>
-            </div>
             <div class="contact-form">
                 <h2>Questions? <br> Contact Us below </h2>
                 <form action="sendmail.php" method="POST">
@@ -161,7 +115,7 @@
 
                     <div class="wrapper">
                                 <a class="party-btn" href="#">
-                                    <span class='book'>Send</span>
+                                    <span class='book'>Submit</span>
                                     <span>
                                         <svg width="2rem" height="1.5rem"
                                             viewBox="0 0 66 43" version="1.1"
@@ -186,26 +140,24 @@
                             </div>
                 </form>
             </div>
-            <footer class="site-footer">
-                <div class="footer-content">
-                    <div class="footer-links">
+        </main>    
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-links">
                     <span>Farmington Fly High Adventure Park</span> 
                     <span> Call: 505-787-2677 | &copy; 2025</span>
-                        <a href="../employment.html">Employment</a>
-                    </div>
-
-                    <div class="footer-legal">
-                        <a href="../privacy.html">Privacy Policy</a>
-                        <a href="../terms.html">Terms of Service / Use</a>
-                    </div>
+                    <a href="../employment.html">Employment</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service / Use</a>
                 </div>
-            </footer>
-            <script>
+            </div>        
+        </footer>
+        <script>
             window.addEventListener('load', () => {
                 document.body.classList.add('loaded');
             });
         </script>
-            <script src="../scripts/burger.js" defer></script>
-            <script src="../scripts/slider.js" defer></script>
-        </body>
-    </html>
+        <script src="../scripts/burger.js" defer></script>
+        <script src="../scripts/slider.js" defer></script>
+    </body>
+</html>

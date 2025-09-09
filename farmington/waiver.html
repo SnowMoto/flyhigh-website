@@ -65,7 +65,7 @@
             </nav>
         </header>
         <main>
-            <h1>Fly High Trampoline Park Waiver</h1>
+            <h1>Fly High Adventure Park Waiver</h1>
             <p class="note">Save time at check in and fill out the waiver below!</p>
             <figure><iframe class="waiver-wrapper waiver" src="https://lilypadpos8.com/flyhighfarmington/onlinewaiver/waiver.php" frameborder="0" scrolling="yes"></iframe></figure>
         </main>
@@ -75,9 +75,6 @@
                     <span>Farmington Fly High Adventure Park</span> 
                     <span> Call: 505-787-2677 | &copy; 2025</span>
                     <a href="../employment.html">Employment</a>
-                </div>
-
-                <div class="footer-legal">
                     <a href="../privacy.html">Privacy Policy</a>
                     <a href="../terms.html">Terms of Service / Use</a>
                 </div>
@@ -87,6 +84,10 @@
             window.addEventListener('load', () => {
                 document.body.classList.add('loaded');
             });
+            const iframe = document.getElementById("waiver-iframe");
+            iframe.onload = () => {
+                document.getElementById("waiver-loading").style.display = "none";
+            };
         </script>
         <script src="../scripts/burger.js" defer></script>
     </body>

@@ -19,8 +19,7 @@
 50%{background-position:400% 0}
 100%{background-position:0 0}
 }
-.tab-btn:hover{color:#84ee59}
-.tab-btn.active{color:#0af}
+.tab-btn.active a{color:#0af}
 .tab-content{display:none}
 .tab-content.active{display:block}
 .party-layout{display:flex;flex-direction:column;align-items:center;background-color:#0f0f0f;border-radius:12px;gap:1rem;text-align:center;margin-top:3rem;padding:0 2rem;min-height:500px}
@@ -86,7 +85,7 @@ path.two{transform:translateX(-30%);transition:.5s}
 .package-title{margin-top:2rem}
 .party-image,.party-text{width:100%;max-width:100%;padding:0}
 .include-item{flex-direction:column;align-items:center;text-align:center;gap:.5rem}
-.include-item img{margin:0 auto;max-width:50%}
+.include-item img{margin:0 auto;max-width:30%}
 .include-item p{text-align:center}
 .party-btn{transform:none;display:block;padding:1rem 0 1rem 2rem}
 .party-slider-container,.party-tabs{width:95%;margin:0 auto;justify-content:center}

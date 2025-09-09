@@ -19,6 +19,7 @@
         <meta property="og:site_name" content="Fly High Adventure Trampoline Park">
         <link rel="icon" href="../flyhigh-website/images/favicon_white.webp" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Electrolize&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/.css">
         <link rel="stylesheet" href="./styles/stars.css">   
         <link rel="stylesheet" href="./styles/sm-styles.css">
     </head>
@@ -36,17 +37,27 @@
             <section class="hero">
                 <h1 class="welcome">Welcome to Your Adventure Park</h1>
                 <label for="location-dropdown" class="hero-text">Select your nearest location to start bouncing:</label>
-                <div class="location-select">
-                    <select id="location-dropdown" onchange="goToLocation(this)">
-                    <option value="">-- Choose a Location --</option>
-                    <option value="/flyhigh-website/farmington/features.html">Farmington NM</option>
-                    <option value="/flyhigh-website/ogden/features.html">Ogden UT</option>
-                    <option value="/flyhigh-website/sparks/features.html">Reno NV</option>
-                    <option value="/flyhigh-website/boise/features.html">Boise ID</option>
-                    <option value="/flyhigh-website/kenosha/features.html">Kenosha WI</option>
-                    <option value="/flyhigh-website/collins/features.html">Collins CO</option>
-                    </select>
-                    <span class="glow"></span>
+                <div class="custom-dropdown" data-dropdown>
+                    <button id="location-button" type="button" aria-haspopup="listbox" aria-expanded="false"> -- Choose a Location -- </button>
+                    <ul id="location-list" role="listbox" hidden>
+                        <li role="option" tabindex="0" data-value="/flyhigh-website/farmington/features.html">Farmington NM</li>
+                        <li role="option" tabindex="0" data-value="/flyhigh-website/ogden/features.html">Ogden UT</li>
+                        <li role="option" tabindex="0" data-value="/flyhigh-website/sparks/features.html">Reno NV</li>
+                        <li role="option" tabindex="0" data-value="/flyhigh-website/boise/features.html">Boise ID</li>
+                        <li role="option" tabindex="0" data-value="/flyhigh-website/kenosha/features.html">Kenosha WI</li>
+                        <li role="option" tabindex="0" data-value="/flyhigh-website/collins/features.html">Collins CO</li>
+                    </ul>
+                </div>
+                <div class="desktop-locations">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 1rem; list-style: none; justify-items: center; width: 100%;">
+                        <a class="place-btn width" href="./boise/features.html">Boise ID</a>
+                        <a class="place-btn width" href="./collins/features.html">Collins CO</a>
+                        <a class="place-btn width" href="./farmington/features.html">Farmington NM</a>
+                        <a class="place-btn width" href="./ogden/features.html">Ogden UT</a>
+                        <a class="place-btn width" href="./sparks/features.html">Reno NV</a>
+                        <a class="place-btn width" href="./woods/features.html">Woodscross UT</a>
+                        <!--<a class="place-btn width" href="/flyhigh-website/kenosha/features.html">Kenosha WI</a>-->
+                    </div>
                 </div>
                 <h2 style="margin: 1.5rem 0 0 0;">Visit your nearest park to see all activities we offer!</h2>
             </section>
@@ -137,6 +148,7 @@
                     reset: true,          
                     transition: true     
             });
+            
         </script>
         <script src="./scripts/slider.js" defer></script>
     </body>

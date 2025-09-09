@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Test</title>
+  <style>
+    /* CSS */
+.custom-dropdown {
+  position: relative;
+  width: min(90vw, 320px);
+  margin: 1rem auto;
+  display: inline-block;
+}
+
+/* Rainbow glow around the whole control */
+.custom-dropdown::before{
+  content:'';
+  position:absolute; inset:-2px;
+  border-radius:10px;
+  background:linear-gradient(45deg,red,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#7a00ff,#ff00c8,red);
+  background-size:500%;
+  filter:blur(5px);
+  animation:glowing 20s linear infinite;
+  z-index:0;
+}
+
+@keyframes glowing{
+  0%{background-position:0 0}
+  50%{background-position:400% 0}
+  100%{background-position:0 0}
+}
+
+.custom-dropdown > button{
+  width:100%;
+  padding:.75rem 1.2rem;
+  font: 600 1.05rem var(--body, system-ui);
+  background:#111; color:var(--text-color,#fff);
+  border:none; border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.6);
+  cursor:pointer; position:relative; z-index:2;
+}
+
+/* The menu */
+.custom-dropdown > ul{
+  position:absolute; top:calc(100% + 6px); left:0; width:100%;
+  background:#111; color:var(--text-color,#fff);
+  border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,.5);
+  margin:0; padding:.25rem 0; list-style:none;
+   z-index:3;
+}
+
+/* Hide via attribute (no class fights) */
+.custom-dropdown > ul[hidden]{ display:none !important; }
+
+.custom-dropdown > ul li{
+  padding:.9rem 1rem;
+  line-height:1.2; cursor:pointer;
+}
+.custom-dropdown > ul li:hover,
+.custom-dropdown > ul li:focus{
+  background:#0090da; outline:none;
+}
+
+  </style>
+</head>
+<body>
+  <!-- HTML -->
+<div class="custom-dropdown" data-dropdown>
+  <button id="location-button" type="button" aria-haspopup="listbox" aria-expanded="false">
+    -- Choose a Location --
+  </button>
+
+  <ul id="location-list" role="listbox" hidden>
+    <li role="option" tabindex="0" data-value="/flyhigh-website/farmington/features.html">Farmington NM</li>
+    <li role="option" tabindex="0" data-value="/flyhigh-website/ogden/features.html">Ogden UT</li>
+    <li role="option" tabindex="0" data-value="/flyhigh-website/sparks/features.html">Reno NV</li>
+    <li role="option" tabindex="0" data-value="/flyhigh-website/boise/features.html">Boise ID</li>
+    <li role="option" tabindex="0" data-value="/flyhigh-website/kenosha/features.html">Kenosha WI</li>
+    <li role="option" tabindex="0" data-value="/flyhigh-website/collins/features.html">Collins CO</li>
+  </ul>
+</div>
+
+
+  <script>
+    // JS (put in your slider.js or right before </body>)
+document.addEventListener('DOMContentLoaded', () => {
+  const dd = document.querySelector('[data-dropdown]');
+  const btn = document.getElementById('location-button');
+  const list = document.getElementById('location-list');
+
+  if (!dd || !btn || !list) return;
+
+  const close = () => {
+    list.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const willOpen = list.hidden;
+    list.hidden = !willOpen;
+    btn.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  list.addEventListener('click', (e) => {
+    const item = e.target.closest('li[data-value]');
+    if (!item) return;
+    btn.textContent = item.textContent;
+    close();
+    window.location.href = item.dataset.value;
+  });
+
+  // Accessibility & closing behavior
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-dropdown]')) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+});
+
+  </script>
+</body>
+</html>

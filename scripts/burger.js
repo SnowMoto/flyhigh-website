@@ -45,3 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+document.querySelector('.tab-btn').addEventListener('click', () => {
+  document.getElementById('deals').scrollIntoView({ behavior: 'smooth' });
+});
