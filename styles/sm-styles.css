@@ -133,7 +133,7 @@ header{display:flex;position:fixed;width:100%;height:80px;background-color:#000;
 header nav ul{display:flex;list-style:none;margin:0;padding:0;gap:25px}
 header nav ul li a{font-family:var(--body);color:#fff;text-decoration:none;font-size:1rem;font-weight:500;transition:color .3s ease}
 header nav ul li a{font-size:1.5rem}
-.logo{max-width:30%;height:auto;display:block}
+.logo{max-width:50%;height:auto;display:block}
 h1{margin-top:9rem;margin-bottom:3rem}
 .drop,h1,h2,h3{font-size:2.5rem}
 p{font-size:1.25rem}
