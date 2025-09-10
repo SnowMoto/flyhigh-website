@@ -156,6 +156,7 @@ p{font-size:1.25rem}
 .waiver{margin-top:3rem}
 .form-wrapper{margin-bottom:3rem}
 .accordion-header{font-size:2rem}
+.accordion-content ul{list-style-type: none;}
 .accordion-content li,.accordion-content p{font-size:1.25rem}
 .contact-hours{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
 .contact-hours .accordion{flex:1 1 300px;min-width:250px;text-align:center}
