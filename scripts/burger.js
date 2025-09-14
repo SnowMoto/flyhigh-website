@@ -45,7 +45,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // For all elements with class 'level'
+  document.querySelectorAll('.level').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('level-up').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 
-document.querySelector('.tab-btn').addEventListener('click', () => {
-  document.getElementById('deals').scrollIntoView({ behavior: 'smooth' });
+  // Only if you actually have these buttons present:
+  const dealsBtn = document.querySelector('.tab-btn'); // if there's only one
+  if (dealsBtn) {
+    dealsBtn.addEventListener('click', () => {
+      const target = document.getElementById('deals');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  const privateBtn = document.querySelector('.private');
+  if (privateBtn) {
+    privateBtn.addEventListener('click', () => {
+      const target = document.getElementById('private-events');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 });
+
