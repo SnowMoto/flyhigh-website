@@ -62,3 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const marqueeTrack = document.querySelector('.marquee-track');
+  const featureCards = document.querySelectorAll('.feature-card');
+
+  if (!marqueeTrack || !featureCards.length) return;
+
+  featureCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      marqueeTrack.classList.add('pause-marquee');
+    });
+
+    card.addEventListener('mouseleave', () => {
+      marqueeTrack.classList.remove('pause-marquee');
+    });
+  });
+});
