@@ -19,7 +19,7 @@ if (burger && mobileNav) {
   });
 }
 
-
+// Terms - Privacy - Hours Accordian Menu
 document.addEventListener("DOMContentLoaded", () => {
   const accordions = document.querySelectorAll(".accordion-header");
 

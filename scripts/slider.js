@@ -1,7 +1,7 @@
 const tabs = document.querySelectorAll('.tab-btn');
 const contents = document.querySelectorAll('.tab-content');
 
-// Set default tab on load
+// Load content and menu
 document.addEventListener('DOMContentLoaded', () => {
   if (!tabs.length || !contents.length) return;
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   defaultContent.classList.add('active', 'visible');
 });
 
-// Tab click logic
+// Party Page
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const tabId = tab.dataset.tab;
@@ -34,6 +34,7 @@ tabs.forEach(tab => {
   });
 });
 
+// Mobile Landing Page Menu
 document.addEventListener('DOMContentLoaded', () => {
   const dd = document.querySelector('[data-dropdown]');
   const btn = document.getElementById('location-button');
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Landing Page Marquee Pause on Hover
 document.addEventListener('DOMContentLoaded', () => {
   const marqueeTrack = document.querySelector('.marquee-track');
   const featureCards = document.querySelectorAll('.feature-card');
@@ -79,18 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
+// Features Page Slider
 const radios = document.querySelectorAll('.slider-features input[type="radio"]');
 const leftArrow = document.querySelector('.arrow.left');
 const rightArrow = document.querySelector('.arrow.right');
 let current = 0;
 
-// Helper to update selected radio
 function updatePosition() {
   radios[current].checked = true;
 }
 
-// Arrow click events
 rightArrow.addEventListener('click', () => {
   current = (current + 1) % radios.length;
   updatePosition();
@@ -101,7 +101,7 @@ leftArrow.addEventListener('click', () => {
   updatePosition();
 });
 
-// Swipe gestures for mobile
+// Swipe Feature Page for mobile
 let startX = 0;
 const carousel = document.querySelector('.carousel');
 carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
