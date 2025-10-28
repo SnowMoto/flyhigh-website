@@ -101,17 +101,34 @@ leftArrow.addEventListener('click', () => {
   updatePosition();
 });
 
-// Swipe Feature Page for mobile
+// --- Mobile Swipe Support ---
 let startX = 0;
+const threshold = 50; // minimum swipe distance
 const carousel = document.querySelector('.carousel');
-carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-carousel.addEventListener('touchend', e => {
-  const endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) {
-    current = (current + 1) % radios.length;
-    updatePosition();
-  } else if (endX - startX > 50) {
-    current = (current - 1 + radios.length) % radios.length;
-    updatePosition();
-  }
-});
+
+if (carousel) {
+  carousel.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchmove', e => {
+    // prevent horizontal scroll interfering with swipe
+    e.preventDefault();
+  }, { passive: false });
+
+  carousel.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    const diffX = startX - endX;
+
+    if (Math.abs(diffX) > threshold) {
+      if (diffX > 0) {
+        // swipe left → next
+        current = (current + 1) % radios.length;
+      } else {
+        // swipe right → previous
+        current = (current - 1 + radios.length) % radios.length;
+      }
+      updatePosition();
+    }
+  });
+}

@@ -115,7 +115,7 @@ input:nth-of-type(9):checked ~ .carousel{--position:9;}
 .price-card h3{font-family:var(--body);font-size:1.5rem;color:var(--accent-color-2);text-shadow: 1px 1px 1px #ff62dd;padding: 0;}
 .price-card .price{font-size:1.4rem;color:var(--accent-color);margin:.5rem 0}
 .price-card span{font-size:1.4rem;color:var(--text-color);opacity:.8}
-.note{font-size:1.25rem;color:var(--text-color);opacity:.9;}
+.note{font-size:1rem;color:var(--text-color);opacity:.9;}
 .focus{line-height: 1.7;}
 .specials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));justify-content:center;align-items:stretch;gap:1.5rem}
 .special-card{position:relative;background-color:#000;border-radius:0 50px 50px 50px;padding:1rem;text-align:center;box-shadow:0 0 15px var(--primary-color);transition:transform .3s ease,box-shadow .3s ease;overflow:hidden}
