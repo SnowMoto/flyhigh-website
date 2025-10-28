@@ -78,3 +78,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+const radios = document.querySelectorAll('.slider-features input[type="radio"]');
+const leftArrow = document.querySelector('.arrow.left');
+const rightArrow = document.querySelector('.arrow.right');
+let current = 0;
+
+// Helper to update selected radio
+function updatePosition() {
+  radios[current].checked = true;
+}
+
+// Arrow click events
+rightArrow.addEventListener('click', () => {
+  current = (current + 1) % radios.length;
+  updatePosition();
+});
+
+leftArrow.addEventListener('click', () => {
+  current = (current - 1 + radios.length) % radios.length;
+  updatePosition();
+});
+
+// Swipe gestures for mobile
+let startX = 0;
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+carousel.addEventListener('touchend', e => {
+  const endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    current = (current + 1) % radios.length;
+    updatePosition();
+  } else if (endX - startX > 50) {
+    current = (current - 1 + radios.length) % radios.length;
+    updatePosition();
+  }
+});
