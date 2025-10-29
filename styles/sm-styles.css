@@ -81,6 +81,8 @@ to{transform:translateX(-50%)}
 .select-btn{display:inline-block;padding:.7rem 1.5rem;font-size:1rem;font-family:var(--heading);color:var(--text-color);background:var(--accent-color-2);border:none;border-radius:50px;text-decoration:none;box-shadow:0 0 10px var(--accent-color-2),0 0 20px var(--accent-color-2);transition:all .3s ease}
 .select-btn:hover{background:var(--accent-color);box-shadow:0 0 15px var(--accent-color),0 0 30px var(--accent-color);transform:scale(1.05)}
 /*===FEATURE PAGE===*/
+.contact-hours ul li{text-align: center; list-style: none;}
+.hours{text-align: center !important;}
 .slider-features {height:500px;margin:0;display:grid;grid-template-columns:1fr 30px 30px 30px 30px 30px 1fr;align-items:center;justify-items:center;position:relative;}
 .carousel {grid-row:1/2;grid-column:1/8;width:100vw;height:500px;display:flex;align-items:center;justify-content:center;overflow:hidden;transform-style:preserve-3d;perspective:600px;--items:5;--middle:3;--position:1;pointer-events:none;}
 .item {position:absolute;width:250px;height:350px;border-radius:12px;background-color: black;--r:calc(var(--position) - var(--offset));--abs:max(calc(var(--r)*-1),var(--r));transition:all .25s linear;transform:rotateY(calc(-10deg*var(--r))) translateX(calc(-300px*var(--r)));z-index:calc((var(--position) - var(--abs)));overflow:hidden;}
@@ -186,7 +188,7 @@ p{font-size:1.25rem}
 .specials-grid{display:grid;grid-template-columns:repeat(5,minmax(250px,1fr));justify-content:center;align-items:stretch;gap:1.5rem}
 .special-card h2{font-size: 3rem;}
 .hours-container{max-width:1000px;margin:0 auto 2rem auto}
-.hours-container .accordion-header{text-align:center}
+.accordion-header{text-align:center}
 .waiver{margin-top:3rem}
 .form-wrapper{margin-bottom:3rem}
 .accordion-header{font-size:2.5rem}
