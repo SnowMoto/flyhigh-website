@@ -13,7 +13,7 @@ p{font-family:var(--body);color:var(--text-color);text-align:center;font-size: 1
 .section-divider{border:none;height:.35rem;background:linear-gradient(to right,var(--accent-color) 0,var(--accent-color-3) 15%,var(--accent-color-2) 25%,var(--accent-color-2) 40%,var(--primary-color) 50%,var(--accent-color-2) 60%,var(--accent-color-2) 70%,var(--accent-color-3) 80%,var(--accent-color) 100%);margin:2.5rem 0}
 nav a:hover{color:var(--accent-color);}
 /*===MOBILE===*/
-.mobile-header{display:flex;position:fixed;justify-content:center;bottom:0;left:0;right:0;background:var(--secondary-color);align-items:center;padding:.5rem 0 1rem 0;z-index:10000;font-family:Arial,sans-serif;gap:3rem}
+.mobile-header{display:flex;position:fixed;justify-content:center;bottom:0;left:0;right:0;background:var(--secondary-color);align-items:center;padding:.5rem 0 1rem 0;z-index:10000;font-family:Arial,sans-serif;}
 .mobile-header .burger{font-size:30px;color:var(--primary-color);background:0 0;border:none;margin:0;cursor:pointer;user-select:none;padding-bottom:.25rem}
 .mobile-nav{position:fixed;bottom:80px;left:0;right:0;background:var(--secondary-color);max-height:0;overflow:hidden;transition:max-height .3s ease;z-index:999}
 .mobile-nav.active{max-height:70vh;overflow-y:auto}
@@ -27,8 +27,9 @@ nav a:hover{color:var(--accent-color);}
 .booking-container a{display:flex;flex-direction:column;align-items:center;text-decoration:none}
 .booking-container img.booking{width:50px;height:auto}
 .booking-container .book-link{font-size:1rem;color:#fff}
-.mobile-header .logo{max-width:30%;height:auto}
+.mobile-header .logo{max-width:60%;height:auto}
 .party-book{max-width:800px;}
+.logo-link{display:inline-flex;justify-content:center;width: 225px;line-height:0;text-decoration:none;flex-shrink:0;}
 /*===LANDING PAGE===*/
 .welcome{margin-top:2rem;}
 .desktop-locations{display:none;}
