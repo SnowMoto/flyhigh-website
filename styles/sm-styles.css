@@ -98,6 +98,7 @@ input:nth-of-type(6):checked ~ .carousel{--position:6;}
 input:nth-of-type(7):checked ~ .carousel{--position:7;}
 input:nth-of-type(8):checked ~ .carousel{--position:8;}
 input:nth-of-type(9):checked ~ .carousel{--position:9;}
+input:nth-of-type(10):checked ~ .carousel{--position:10;}
 .arrow {position:absolute;top:45%;transform:translateY(-50%);background:rgba(176, 116, 255, 0.4);color:#fff;border:none;cursor:pointer;font-size:2rem;padding:.5rem 1rem;z-index:3;transition:background .3s;}
 .arrow:hover{background:rgba(139, 255, 93, 0.7);}
 .arrow.left{left:20px;}
