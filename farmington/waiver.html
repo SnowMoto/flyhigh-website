@@ -69,7 +69,7 @@
             <p class="note" style="color: var(--accent-color);"><strong>Attention:</strong><br> All visitors must complete our new waiver before entering the facility.<br> 
                 Parents or legal guardians must complete waivers for any children under 18.<br> 
                 Incomplete or incorrect waivers will not be accepted. Thank you.</p>
-            <figure><iframe class="waiver-wrapper waiver" src="https://lilypadpos8.com/flyhighfarmington/onlinewaiver/waiver.php" frameborder="0" scrolling="yes"></iframe></figure>
+            <figure><iframe id="waiver-iframe" class="waiver-wrapper waiver" src="https://lilypadpos8.com/flyhighfarmington/onlinewaiver/waiver.php" frameborder="0" scrolling="yes"></iframe></figure>
         </main>
         <footer class="site-footer">
             <div class="footer-content">
@@ -84,12 +84,20 @@
         </footer>
         <script>
             window.addEventListener('load', () => {
-                document.body.classList.add('loaded');
-            });
+            document.body.classList.add('loaded');
             const iframe = document.getElementById("waiver-iframe");
-            iframe.onload = () => {
-                document.getElementById("waiver-loading").style.display = "none";
-            };
+            
+            if (iframe) { // Only attach onload if it exists
+                iframe.addEventListener('load', () => {
+                    const loadingElem = document.getElementById("waiver-loading");
+                    if (loadingElem) {
+                        loadingElem.style.display = "none";
+                    }
+                });
+            } else {
+                console.warn('Iframe with id "waiver-iframe" not found.');
+            }
+        });
         </script>
         <script src="../scripts/burger.js" defer></script>
     </body>

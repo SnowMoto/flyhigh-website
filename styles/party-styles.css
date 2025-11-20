@@ -1,10 +1,10 @@
-#title {background:linear-gradient(to right, black 0%, transparent 20%, transparent 80%, black 100%),url('../images/fm/fm-birthday-kid.png');background-size:cover;background-position:center;padding:2rem 0;}
-#title-features {background:linear-gradient(to bottom, black 0%, transparent 20%, transparent 80%, black 100%),url('../images/pheonix.webp');background-size:cover, 125%;background-repeat: no-repeat; background-position:50% 10%;height:60px;padding:3rem 0;}
+#title{background:linear-gradient(to right,#000 0,transparent 20%,transparent 80%,#000 100%),url(../images/fm/fm-birthday-kid.png);background-size:cover;background-position:center;padding:2rem 0}
+#title-features{background:linear-gradient(to bottom,#000 0,transparent 20%,transparent 80%,#000 100%),url(../images/pheonix.webp);background-size:cover,125%;background-repeat:no-repeat;background-position:50% 10%;height:60px;padding:3rem 0}
 .party-slider-container{max-width:1100px;margin:0 auto;text-align:center;color:#fff;z-index:1}
-.party-tabs{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem !important;}
-.level{position:relative;z-index:0;padding:.5rem 2rem;background:#000;color:#fff;border:none;outline:0;border-radius:5rem;cursor:pointer;font-family:"oswald",sans-serif;font-size:1.25rem}
-.level:hover{color: var(--accent-color);}
-.tab-btn{position:relative;z-index:0;padding:.5rem 3rem;background:#000;color:#fff;border:none;outline:0;border-radius:8px;cursor:pointer;font-family:"oswald",sans-serif;font-size:1.5rem}
+.party-tabs{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem!important}
+.level{position:relative;z-index:0;padding:.5rem 2rem;background:#000;color:#fff;border:none;outline:0;border-radius:5rem;cursor:pointer;font-family:oswald,sans-serif;font-size:1.25rem}
+.level:hover{color:var(--accent-color)}
+.tab-btn{position:relative;z-index:0;padding:.5rem 3rem;background:#000;color:#fff;border:none;outline:0;border-radius:8px;cursor:pointer;font-family:oswald,sans-serif;font-size:1.5rem}
 .tab-btn:before{content:'';background:linear-gradient(45deg,#ff62dd,#fffb00,#48ff00,#00ffd5,#002bff,#b074ff,#ff62dd);position:absolute;top:-2px;left:-2px;background-size:400%;z-index:-1;filter:blur(2px) saturate(1.8);width:calc(100% + 5px);height:calc(100% + 5px);animation:glowing 40s linear infinite;opacity:1;transition:opacity .3s ease-in-out;border-radius:10px}
 .tab-btn::after{content:'';position:absolute;inset:0;background:#000;border-radius:8px;z-index:-1}
 @keyframes glowing{
@@ -12,14 +12,14 @@
 50%{background-position:400% 0}
 100%{background-position:0 0}
 }
-.tab-btn:hover{color: var(--accent-color);}
+.tab-btn:hover{color:var(--accent-color)}
 .tab-btn.active a{color:#0af}
 .tab-content{display:none}
 .tab-content.active{display:block}
 .party-layout{display:flex;flex-direction:column;align-items:center;background-color:#0f0f0f;border-radius:12px;gap:1rem;text-align:center;margin-top:3rem;padding:0 2rem;min-height:500px}
 .party-image img{max-width:100%;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.5);object-fit:cover}
 .party-text h2{font-size:2rem;color:#0af;margin-bottom:.5rem;margin-top:1rem}
-.party-text h3{font-size: 2.25rem;}
+.party-text h3{font-size:2.25rem}
 .party-text .package-price{color:#0af;font-weight:700;margin-bottom:1rem}
 .party-text ul{list-style:none;padding-left:1.5rem;margin-bottom:1.5rem;color:#eee}
 .party-text ul li{font-family:Electrolize,sans-serif;font-size:1.35rem;margin-bottom:.5rem}
@@ -49,33 +49,33 @@ path.two{transform:translateX(-30%);transition:.5s}
 .include-item p{font-size:1.25rem;color:#f5f5f5}
 
 @media (min-width:1050px){
-    #title{padding:4rem 11rem 4rem 11em;}
-    #title-features{background-size:cover, 105%;background-position:50% 10%;height: 225px;width: 55%;padding:3rem 0;}
-    .party-layout{flex-direction:row;text-align:left;justify-content:center}
-    .package-title{margin-top:-1rem}
-    .party-tabs{gap:5rem}
-    .party-image,.party-text{flex:1}
-    .party-text{padding-left:2rem}
-    .party-text, .package-price{font-size:1.75rem;}
-    .tab-btn{font-size:1.75rem;margin-top: 2rem;}
-    .party-text h2{font-size:2.5rem}
-    .party-text ul{list-style:disc}
-    .party-text ul li{font-size:1.45rem}
-    .party-text p{margin-top: 2rem;}
-    .includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.25rem;}
-    .include-item{display:block;text-align:center}
-    .include-item img{max-width:40%;margin-bottom:.75rem}
-    .include-item p{font-size:1.5rem}
-    .level{font-size:1.5rem;}
+#title{padding:4rem 11rem 4rem 11em}
+#title-features{background-size:cover,105%;background-position:50% 10%;height:225px;width:55%;padding:3rem 0}
+.party-layout{flex-direction:row;text-align:left;justify-content:center}
+.package-title{margin-top:-1rem}
+.party-tabs{gap:5rem}
+.party-image,.party-text{flex:1}
+.party-text{padding-left:2rem}
+.package-price,.party-text{font-size:1.75rem}
+.tab-btn{font-size:1.75rem;margin-top:2rem}
+.party-text h2{font-size:2.5rem}
+.party-text ul{list-style:disc}
+.party-text ul li{font-size:1.45rem}
+.party-text p{margin-top:2rem}
+.includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.25rem}
+.include-item{display:block;text-align:center}
+.include-item img{max-width:40%;margin-bottom:.75rem}
+.include-item p{font-size:1.5rem}
+.level{font-size:1.5rem}
 }
 @media (max-width:1000px){
-    .party-layout{flex-direction:column;align-items:center;text-align:center;margin:2rem 0 0 0;padding:0;width:100%}
-    .package-title{margin-top:2rem}
-    .party-image,.party-text{width:100%;max-width:100%;padding:0}
-    .include-item{flex-direction:column;align-items:center;text-align:center;gap:.5rem}
-    .include-item img{margin:0 auto;max-width:30%}
-    .include-item p{text-align:center}
-    .party-btn{transform:none;display:block;padding:.5rem 0 .5rem 1rem}
-    .party-slider-container,.party-tabs{width:95%;margin:0 auto;justify-content:center}
-    .tab-btn{margin:.5rem auto;display:block;font-size:1.2rem}
+.party-layout{flex-direction:column;align-items:center;text-align:center;margin:2rem 0 0 0;padding:0;width:100%}
+.package-title{margin-top:2rem}
+.party-image,.party-text{width:100%;max-width:100%;padding:0}
+.include-item{flex-direction:column;align-items:center;text-align:center;gap:.5rem}
+.include-item img{margin:0 auto;max-width:30%}
+.include-item p{text-align:center}
+.party-btn{transform:none;display:block;padding:.5rem 0 .5rem 1rem}
+.party-slider-container,.party-tabs{width:95%;margin:0 auto;justify-content:center}
+.tab-btn{margin:.5rem auto;display:block;font-size:1.2rem}
 }
