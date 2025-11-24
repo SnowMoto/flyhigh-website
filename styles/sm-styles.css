@@ -14,6 +14,7 @@ p{font-family:var(--body);color:var(--text-color);text-align:center;font-size:1.
 nav a:hover{color:var(--accent-color)}
 header .logo-home{display:flex;justify-content:center;align-items:center}
 .logo-home img{max-width:50%;height:auto;margin-top:1.5rem}
+/*========== Mobile ==========*/
 .mobile-header{display:flex;position:fixed;justify-content:center;bottom:0;left:0;right:0;background:var(--secondary-color);align-items:center;padding:.5rem 0 1rem 0;z-index:10000;font-family:Arial,sans-serif}
 .mobile-header .burger{font-size:30px;color:var(--primary-color);background:0 0;border:none;margin:0;cursor:pointer;user-select:none;padding-bottom:.25rem}
 .mobile-nav{position:fixed;bottom:80px;left:0;right:0;background:var(--secondary-color);max-height:0;overflow:hidden;transition:max-height .3s ease;z-index:999}
@@ -31,8 +32,10 @@ header .logo-home{display:flex;justify-content:center;align-items:center}
 .mobile-header .logo{max-width:60%;height:auto}
 .party-book{max-width:800px}
 .logo-link{display:inline-flex;justify-content:center;width:225px;line-height:0;text-decoration:none;flex-shrink:0}
-#backToTop{position:fixed;bottom:140px;right:20px;padding:.7rem 1rem;font-size:1rem;border:none;border-radius:20px 0 20px 0;background:var(--accent-color-2,#333);color:#000;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.25);cursor:pointer;transition:opacity .25s ease;font-weight:700;z-index:9999}
+#backToTop{position:fixed;bottom:140px;right:20px;padding:.5rem .7rem;border:none;border-radius:15px 0 15px 0;background:var(--accent-color-2,#333);color:#000;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.25);cursor:pointer;transition:opacity .25s ease;font-weight:700;z-index:9999}
 #backToTop.show{opacity:1;pointer-events:auto}
+#backToTop svg{width:25px;height:25px;font-size: 35px;}
+/*========== Landing ==========*/
 .welcome{margin:1rem 0 0 0}
 .desktop-locations{display:none}
 .custom-dropdown{position:relative;width:min(90vw,320px);margin:1rem auto;display:inline-block}
@@ -78,6 +81,7 @@ to{transform:translateX(-50%)}
 .games{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/arcade.jpg) center/cover no-repeat}
 .park{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/ninja-course.webp) center/cover no-repeat}
 .party{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/private-lg.webp) center/cover no-repeat}
+/*========== Features ==========*/
 .select-btn{display:inline-block;padding:.7rem 1.5rem;font-size:1rem;font-family:var(--heading);color:var(--text-color);background:var(--accent-color-2);border:none;border-radius:50px;text-decoration:none;box-shadow:0 0 10px var(--accent-color-2),0 0 20px var(--accent-color-2);transition:all .3s ease}
 .select-btn:hover{background:var(--accent-color);box-shadow:0 0 15px var(--accent-color),0 0 30px var(--accent-color);transform:scale(1.05)}
 .contact-hours ul li{text-align:center;list-style:none}
@@ -102,12 +106,14 @@ input:nth-of-type(10):checked~.carousel{--position:10}
 .arrow:hover{background:rgba(139,255,93,.7)}
 .arrow.left{left:20px}
 .arrow.right{right:20px}
+/*========== Footer ==========*/
 .site-footer{position:relative;left:0;background-color:#000;color:var(--text-color);padding:1rem 0 1rem 0;font-family:Oswald,sans-serif;font-size:1.25rem;border-top:2px solid #444;width:100%;height:175px;overflow:hidden;z-index:100}
 .footer-content{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
 .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;line-height:1.3}
 .footer-links span{flex-basis:100%;color:var(--text-color)}
 .site-footer a{color:var(--accent-color);text-decoration:none;transition:color .3s ease}
 .site-footer a:hover{color:#1da1f2;text-decoration:underline}
+/*========== Rates & Specials ==========*/
 .rates-specials{padding:1rem 0 2rem 0;max-width:1200px;margin:1rem 2rem}
 .section-title h2{font-family:var(--heading);font-size:2rem;margin-bottom:1.5rem;color:var(--primary-color);text-align:center}
 .flex-column{display:flex;flex-direction:column;align-items:stretch;gap:2.5rem}
@@ -127,6 +133,7 @@ input:nth-of-type(10):checked~.carousel{--position:10}
 .special-card h3{font-family:var(--body);font-size:1.5rem;margin-bottom:.5rem;padding:0}
 .special-card h2{font-size:2.25rem}
 .special-card p{font-size:1.4rem;color:var(--text-color);margin-bottom:1rem;line-height:1.7}
+/*========== Contact ==========*/
 .contact-wrapper{display:flex;flex-direction:column;align-items:center;max-width:1000px;margin:0 auto}
 .contact-container,.map-container{flex:1 1 100%;min-width:0;max-width:500px}
 .contact-location h3{margin-bottom:0;padding-bottom:0}
@@ -148,12 +155,14 @@ figure{margin:0 0 3rem 0}
 .accordion-content{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;padding:0 1rem;color:var(--text-color);font-family:var(--body);font-size:1rem}
 .accordion-content.open{max-height:1000px;padding:1rem}
 .accordion-content.open a{color:var(--accent-color);max-height:1000px}
+/*========== Desktop ==========*/
 @media (min-width:1050px){
 .welcome{margin:2rem 0 0 0;padding-bottom:0}
 .bg-image{background-image:url(../images/spotlight.webp);z-index:1}
 .logo-home img{max-width:75%;height:auto}
 .mobile-header,.mobile-nav{display:none}
-#backToTop{bottom:50px;right:100px;font-size:1.5rem}
+#backToTop{bottom:50px;right:100px;}
+#backToTop svg{width:50px;height:50px;font-size:60px;}
 .top{display:block}
 .top{display:flex;position:fixed;width:100%;height:80px;background-color:#000;justify-content:center;align-items:center;padding:1rem 0;z-index:1000;top:0}
 .top nav ul{display:flex;list-style:none;margin:0;padding:0;gap:25px}
