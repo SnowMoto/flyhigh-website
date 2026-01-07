@@ -1,7 +1,7 @@
 :root{--primary-color:#00aaff;--secondary-color:#000;--text-color:white;--accent-color:#8bff5d;--accent-color-2:#b074ff;--accent-color-3:#ff62dd;--heading:'Iceland',sans-serif;--body:"Electrolize",sans-serif}
 body,html{margin:0;overflow-x:hidden;scrollbar-width:none}
 footer,header,main{position:relative;z-index:2}
-.bg-image{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url(../images/spotlight.webp);background-size:cover;background-position:top;background-attachment:scroll;z-index:1}
+.bg-image{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url(../images/banner-background.png);background-size:cover;background-position:top;background-attachment:scroll;z-index:1}
 .top{display:none}
 .hero{display:flex;position:relative;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 .active{color:var(--primary-color)}
@@ -158,7 +158,7 @@ figure{margin:0 0 3rem 0}
 /*========== Desktop ==========*/
 @media (min-width:1050px){
 .welcome{margin:2rem 0 0 0;padding-bottom:0}
-.bg-image{background-image:url(../images/spotlight.webp);z-index:1}
+.bg-image{background-image:url(../images/banner-background.png);z-index:1}
 .logo-home img{max-width:75%;height:auto}
 .mobile-header,.mobile-nav{display:none}
 #backToTop{bottom:50px;right:100px;}
