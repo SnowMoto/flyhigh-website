@@ -1,0 +1,11 @@
+.basketball{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/fm/fm-basketball.webp) top/cover no-repeat}
+.dodge{background:url(../images/fm/fm-dodgeball.webp) center/cover no-repeat}
+.joust{background:url(../images/fm/fm-jousting.webp) center/cover no-repeat}
+.box{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/fm/fm-park.webp) center/cover no-repeat}
+.mezz{background:url(../images/fm/fm-mezzanine.webp) center/cover no-repeat}
+.ninja{background:url(../images/fm/fm-ninja.webp) center/cover no-repeat}
+.soft{background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url(../images/fm/fm-softplay.webp) center/cover no-repeat}
+.bag{background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url(../images/fm/fm-box.webp) center/cover no-repeat}
+.super{background:url(../images/fm/fm-highperformance.webp) center/cover no-repeat}
+.open-court{background:url(../images/fm/fm-open.webp) center/cover no-repeat}
+.zip{background:url(../images/fm/fm-zip.webp) center/cover no-repeat}

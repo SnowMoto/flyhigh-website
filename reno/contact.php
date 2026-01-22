@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = trim($_POST["message"]);
 
     // Recipient email
-    $to = "flyhighfarmington@gmail.com";
+    $to = "farmington@hawk-media.com";
 
     // Email subject
     $subject = "New Contact Form Submission";
