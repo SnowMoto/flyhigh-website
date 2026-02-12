@@ -1,0 +1,9 @@
+.basketball{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/wc/basket-ball.JPG) top/cover no-repeat}
+.dodge{background:url(../images/wc/dodge_ball.JPG) center/cover no-repeat}
+.box{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/wc/parkor-area.JPG) center/cover no-repeat}
+.ninja{background:url(../images/wc/ninja-course.jpg) center/cover no-repeat}
+.soft{background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url(../images/wc/slide-tunnel.JPG) center/cover no-repeat}
+.bag{background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url(../images/wc/foam-pit.JPG) center/cover no-repeat}
+.super{background:url(../images/wc/high-performance.jpg) center/cover no-repeat}
+.open-court{background:url(../images/wc/open-table.JPG) center/cover no-repeat}
+.zip{background:url(../images/wc/zip-line.JPG) center/cover no-repeat}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Woods Cross Fly High Waiver</title>
+        <meta name="description"
+            content="Plan your ultimate celebration at Fly High Trampoline Park in Woods Cross, UT. Featuring trampolines, ninja course, zip line, foam pits, parkour & more.">
+        <meta name="keywords"
+            content="Woods Cross, Fly High, trampoline park, ninja course, zip line, foam pits, parkour">
+        <meta name="author" content="Studio Code&Design">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Woods Cross UT Fly High">
+        <meta property="og:description"
+            content="Plan your ultimate celebration at Fly High Trampoline Park in Woods Cross, UT—featuring trampolines, ninja course, zip line, foam pits, parkour & more.">
+        <meta property="og:image" content="/images/fly-high.jpg">
+        <meta property="og:url" content="https://woodscross.flyhighfun.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Woods Cross Fly High">
+        <link rel="icon" href="../images/favicon_white.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Electrolize&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../styles/stars.css">
+        <link rel="stylesheet" href="../styles/party-styles.css">
+        <link rel="stylesheet" href="../styles/sm-styles.css">
+    </head>
+    <body>
+        <div class="bg-image"></div>
+        <div class="stars-wrapper">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </div>
+        <header class="top">
+            <a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><img class="logo" src="../images/logo-tramp.webp" alt="Fly High Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="../woods/features.html">Features</a></li>
+                    <li><a href="../woods/prices.html">Prices</a></li>
+                    <li><a href="../woods/party.html">Parties</a></li>
+                    <li><a href="../woods/waiver.html" class="active">Waiver</a></li>
+                    <li><a href="../woods/info.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <header class="mobile-header">
+            <div class="booking-container">
+                <a href="../woods/party.html"><img class="booking" src="../images/birthday.webp"
+                    alt="Party Booking"><span class="book-link">Book</span></a>
+            </div>
+            <a href="../index.html" class="logo-link"><img class="logo" rel="preload" src="../images/logo-tramp.webp"alt="Fly High Logo"></a>
+            <div class="menu-container">
+                <button class="burger" aria-label="Toggle menu"
+                    aria-expanded="false">&#9776;</button>
+                <span class="menu-link">Menu</span>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="../woods/features.html">Features</a></li>
+                    <li><a href="../woods/prices.html">Prices</a></li>
+                    <li><a href="../woods/party.html" >Parties</a></li>
+                    <li><a href="../woods/waiver.html" class="active">Waiver</a></li>
+                    <li><a href="../woods/info.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Fly High Adventure Park Waiver</h1>
+            <p class="note" style="color: var(--text-color);">Save time at check in and fill out the waiver below!</p>
+            <p class="note" style="color: var(--accent-color);"><strong>Attention:</strong><br> All visitors must complete our new waiver before entering the facility.<br> 
+                Parents or legal guardians must complete waivers for any children under 18.<br> 
+                Incomplete or incorrect waivers will not be accepted. Thank you.</p>
+            <figure><iframe id="waiver-iframe" class="waiver-wrapper waiver" style="max-height: 450px;" src="https://flyhighwoodscross.lilypadpos.app/public/onlinewaiver/waiver.php" frameborder="0" scrolling="no"></iframe></figure>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <span>Woods Cross Fly High Adventure Park</span> 
+                    <span> Call: 801-797-5177 | &copy; 2025</span>
+                    <a href="../employment.html">Employment</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service / Use</a>
+                </div>
+            </div>
+        </footer>
+        <script>
+            window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            const iframe = document.getElementById("waiver-iframe");
+            
+            if (iframe) { // Only attach onload if it exists
+                iframe.addEventListener('load', () => {
+                    const loadingElem = document.getElementById("waiver-loading");
+                    if (loadingElem) {
+                        loadingElem.style.display = "none";
+                    }
+                });
+            } else {
+                console.warn('Iframe with id "waiver-iframe" not found.');
+            }
+        });
+        </script>
+        <script src="../scripts/burger.js" defer></script>
+    </body>
+</html>
