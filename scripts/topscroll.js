@@ -1,20 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("backToTop");
-    const main = document.querySelector("main"); // the actual scroll container
 
-    if (!btn || !main) return;
+    if (!btn) {
+        console.error("Back-to-top button not found.");
+        return;
+    }
 
-    window.addEventListener("scroll", () => {
-        if (main.scrollTop > 200 || window.scrollY > 200) {
+    // Check scroll position and show/hide button
+    function toggleBackToTop() {
+        if (window.scrollY > 200) {
             btn.classList.add("show");
         } else {
             btn.classList.remove("show");
         }
-    });
+    }
 
+    window.addEventListener("scroll", toggleBackToTop);
+
+    // Back to top
     btn.addEventListener("click", () => {
         console.log("Scroll to top!");
-        main.scrollTo({ top: 0, behavior: "smooth" });
-        window.scrollTo({ top: 0, behavior: "smooth" }); // fallback
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
     });
+
+    // Set initial state
+    toggleBackToTop();
 });
