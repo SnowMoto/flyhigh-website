@@ -197,6 +197,7 @@ p{font-size:1.25rem}
 .hours-container{max-width:1000px;margin:0 auto 2rem auto}
 .accordion-header{text-align:center}
 .waiver{margin-top:3rem}
+.waiver-wrapper{width: 50%;}
 .form-wrapper{margin-bottom:3rem}
 .accordion-header{font-size:2.5rem}
 .accordion-content ul{list-style-type:none}
