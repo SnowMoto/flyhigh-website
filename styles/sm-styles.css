@@ -7,7 +7,7 @@ footer,header,main{position:relative;z-index:2}
 .hero{display:flex;position:relative;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 .active{color:var(--primary-color)}
 .drop,h1,h2,h3{font-family:var(--heading);text-align:center;font-size:2rem;margin:0 0 1rem 0}
-.drop,h1,h3{padding: 1.5rem 0 1rem 0;}
+.drop,h1,h3{padding: 1rem 0 1rem 0;}
 .drop,h2,h3{color:var(--primary-color)}
 h1{color:var(--primary-color)}
 h3{color:var(--accent-color)}
@@ -174,7 +174,7 @@ figure{margin:0 0 3rem 0}
 .logo{max-width:55%;height:auto;display:block}
 .main{max-width:75%;height:auto;display:block}
 h1{margin-top:8rem;margin-bottom:2rem}
-.drop,h1,h2,h3{font-size:2.75rem}
+.drop,h1,h2,h3{font-size:2.75rem;}
 #level-up{margin:2rem 0 2rem 0}
 p{font-size:1.25rem}
 .hero-text{font-size:1.5rem}
@@ -213,7 +213,7 @@ p{font-size:1.25rem}
 .section-title h2{font-size:2.25rem}
 .price-card h3{font-size:2rem}
 .special-card h3{font-size:1.75rem}
-.rates-specials{margin:0 auto}
+.rates-specials{margin:0 auto; padding: 1rem 0 2rem 0}
 .note,.price-card p,.price-card span,.rates-special p,.special-card p{font-size:1.35rem}
 p.note {padding:0 .75rem 0 .75rem;}
 .location-select select{position:relative;font-family:var(--body);font-size:1.2rem;padding:.75rem 1.2rem;border:none;border-radius:10px;background:#111;color:var(--text-color);cursor:pointer;z-index:1;box-shadow:0 0 10px rgba(0,0,0,.6);appearance:none;transition:all .3s ease-in-out}
