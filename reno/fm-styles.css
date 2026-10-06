@@ -9,3 +9,5 @@
 .super{background:url(../images/fm/fm-highperformance.webp) center/cover no-repeat}
 .open-court{background:url(../images/fm/fm-open.webp) center/cover no-repeat}
 .zip{background:url(../images/fm/fm-zip.webp) center/cover no-repeat}
+.reno-party{display:flex;justify-content:center;gap:5rem;}
+iframe.reno-party{max-width:150rem;max-height:100%;border:none;padding:0 1rem 0 1rem;background-color: gainsboro;}
