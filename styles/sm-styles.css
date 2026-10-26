@@ -106,6 +106,8 @@ input:nth-of-type(8):checked~.carousel{--position:8}
 input:nth-of-type(9):checked~.carousel{--position:9}
 input:nth-of-type(10):checked~.carousel{--position:10}
 input:nth-of-type(11):checked~.carousel{--position:11}
+input:nth-of-type(12):checked~.carousel{--position:12}
+input:nth-of-type(13):checked~.carousel{--position:13}
 .arrow{position:absolute;top:45%;transform:translateY(-50%);background:rgba(176,116,255,.4);color:#fff;border:none;cursor:pointer;font-size:2rem;padding:.5rem 1rem;z-index:3;transition:background .3s}
 .arrow:hover{background:rgba(139,255,93,.7)}
 .arrow.left{left:20px}
